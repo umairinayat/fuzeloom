@@ -1,6 +1,6 @@
 # FuzeLoom Technologies — fuzeloom.tech
 
-Next.js App Router + TypeScript + Tailwind. Original textile identity: indigo / linen / amber thread.
+Next.js App Router + TypeScript + Tailwind. Navy and cobalt visual identity.
 
 ## Getting Started
 
@@ -16,7 +16,6 @@ Open http://localhost:3000
 
 ```
 RESEND_API_KEY=          # required for contact form email, else mailto fallback
-CONTACT_TO_EMAIL=hello@fuzeloom.tech
 NEXT_PUBLIC_SITE_URL=https://fuzeloom.tech
 ```
 
@@ -35,10 +34,10 @@ Both must pass. Content lives in `/content` — no invented clients, no stock-as
 
 1. Push to GitHub (`umairinayat/fuzeloom`, branch `main`).
 2. Vercel → Add New → Project → Import `fuzeloom`. Framework preset: Next.js (auto from `vercel.json`).
-3. Environment Variables → add `RESEND_API_KEY`, `CONTACT_TO_EMAIL`.
+3. Environment Variables → add `RESEND_API_KEY`.
 4. Deploy. Then Settings → Domains → add `fuzeloom.tech` + `www.fuzeloom.tech`.
 5. DNS at your registrar:
    - `A @ 76.76.21.21`
    - `CNAME www cname.vercel-dns.com`
-6. Resend → verify `hello@fuzeloom.tech` (SPF/DKIM/DMARC) so form mail lands in inbox.
+6. Set up `contact@fuzeloom.tech` as a receiving inbox. Verify the domain in Resend (SPF/DKIM/DMARC) so form mail can be delivered.
 7. Re-deploy after setting custom domain so `sitemap.xml` / OG use `https://fuzeloom.tech`.

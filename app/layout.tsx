@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Space_Grotesk, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { site } from "@/content/site";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const space = Space_Grotesk({
+  variable: "--font-space",
   subsets: ["latin"],
-  weight: ["500", "600"],
   display: "swap",
 });
 
@@ -50,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}
+      className={`${space.variable} ${inter.variable} ${plexMono.variable}`}
     >
       <body className="flex min-h-full flex-col bg-linen text-ink antialiased">
         <a

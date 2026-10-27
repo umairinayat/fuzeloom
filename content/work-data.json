@@ -1,0 +1,1653 @@
+[
+  {
+    "slug": "carelinx",
+    "title": "Carelinx",
+    "category": "HealthTech",
+    "industry": "Healthcare",
+    "source": "DataFuzeo",
+    "sourceUrl": "https://www.datafuzeo.com/projects/carelinx",
+    "summary": "Making healthcare scheduling simple, accessible, and patient-first.",
+    "overview": "Carelinx is a healthcare platform that enables patients to easily book clinic appointments based on their specific needs. Users can browse clinics, compare doctors, view availability, and select convenient time slots  creating a smooth and transparent booking experience. We designed both the patient-facing flows and the back-office dashboard, focusing on accessibility, trust, and clarity. Our approach involved user journey mapping, competitive analysis of telehealth platforms, and testing multiple scheduling scenarios to ensure usability across diverse user groups.",
+    "problem": "Patients struggled with fragmented, phone-based clinic booking systems that lacked transparency.",
+    "approach": "End-to-end scheduling platform with patient booking flows, doctor discovery, and a clinic management dashboard.",
+    "outcome": "60% Faster Booking · 35% No-Show Reduction · 50% Less Admin Work",
+    "metrics": [
+      {
+        "value": "60%",
+        "label": "Faster Booking"
+      },
+      {
+        "value": "35%",
+        "label": "No-Show Reduction"
+      },
+      {
+        "value": "50%",
+        "label": "Less Admin Work"
+      }
+    ],
+    "stack": [
+      "React",
+      "Node.js",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Figma"
+    ],
+    "image": "/work/carelinx/hero.webp",
+    "client": "Carelinx",
+    "timeline": "8 weeks",
+    "modules": [
+      {
+        "title": "Secure Admin Authentication",
+        "description": "A clean, minimal sign-in screen for clinic administrators. The authentication flow supports email/password login with role-based access control, ensuring only authorized staff can access sensitive patient and scheduling data.",
+        "bullets": [
+          "Email and password authentication with encrypted sessions",
+          "Forgot password recovery flow for clinic staff",
+          "Role-based access -> Super Admin, Clinic Admin, and Staff roles",
+          "Clean, brand-consistent login experience that builds trust"
+        ],
+        "images": [
+          "/work/carelinx/module-1-1.webp"
+        ]
+      },
+      {
+        "title": "Analytics Dashboard",
+        "description": "The main command center for clinic operations. At a glance, administrators can monitor today's appointments, pending approvals, new patient registrations, and completed appointments. The dashboard includes interactive charts for appointment trends, specialty distribution, and patient retention analysis.",
+        "bullets": [
+          "Quick stats cards — Today's Appointments, Pending Approvals, New Patients, Completed",
+          "Appointment Trend chart with yearly/monthly/weekly filters",
+          "Appointments by Specialty — donut chart breaking down Cardiology, Dermatology, Pediatrics, etc.",
+          "Pending Approvals table with patient details and one-click approval",
+          "Returned Patients vs. New Patients — horizontal bar chart for retention insights"
+        ],
+        "images": [
+          "/work/carelinx/module-2-1.webp",
+          "/work/carelinx/module-2-2.webp"
+        ]
+      },
+      {
+        "title": "Appointment Management",
+        "description": "A comprehensive appointments view with status-based filtering (All, Pending, Approved, Completed, Cancelled) and time-based filters (Today, Tomorrow, This Week, All Time). Each row shows the patient, assigned doctor, service type, date/time, and current status with a quick-action button.",
+        "bullets": [
+          "Status filters — Pending, Approved, Completed, Cancelled with color-coded badges",
+          "Searchable list by patient name, doctor, or service",
+          "Time-range filters for daily, weekly, and historical views",
+          "View Details action for full appointment records and notes",
+          "Bulk operations support for high-volume clinics"
+        ],
+        "images": [
+          "/work/carelinx/module-3-1.webp"
+        ]
+      },
+      {
+        "title": "Doctors & Treatment Management",
+        "description": "Full doctor roster management with an intuitive 'Add New Doctor' modal. Administrators can register doctors with personal details, professional specialty, service assignments, experience level, status, and pricing — all from a single form. The main view shows active doctors, treatments, and status at a glance.",
+        "bullets": [
+          "Doctor registry with total count, active doctors, and treatment statistics",
+          "Add New Doctor form — name, gender, email, phone, specialty (multi-select), service, experience, status, and pricing",
+          "Treatment tab to manage available services and link them to doctors",
+          "Status indicators — Active, Inactive, On Leave — for scheduling visibility",
+          "Quick-edit and detail views for existing doctor profiles"
+        ],
+        "images": [
+          "/work/carelinx/module-4-1.webp"
+        ]
+      },
+      {
+        "title": "Clinic Profile & Settings",
+        "description": "A dedicated profile page for each clinic showing general information, working hours, and notification preferences. Clinic admins can edit operating hours, toggle appointment notifications, manage auto-approval for returning patients, and configure reminder emails.",
+        "bullets": [
+          "Clinic identity — name, description, specialties, registration date, and unique Clinic ID",
+          "Contact details — email, phone, and full address displayed prominently",
+          "Working Hours table with per-day opening and closing times, editable inline",
+          "Settings & Preferences — toggle switches for appointment notifications, reschedule alerts, auto-approval, and reminder emails",
+          "Edit Profile and Edit Hours actions for quick updates"
+        ],
+        "images": [
+          "/work/carelinx/module-5-1.webp"
+        ]
+      },
+      {
+        "title": "Results & Impact",
+        "description": "The platform was designed to reduce scheduling friction and improve both patient satisfaction and clinic operational efficiency across all touchpoints.",
+        "bullets": [
+          "60% reduction in average booking time vs. phone-based scheduling",
+          "Patient-friendly calendar reduced no-show rates by 35%",
+          "Clinic staff reported 50% less time spent on manual appointment management",
+          "Consistent design system across 6 modules — login, dashboard, appointments, doctors, clinic profile, and patient views",
+          "Full role-based access control ensuring data privacy and HIPAA-readiness"
+        ],
+        "images": []
+      }
+    ]
+  },
+  {
+    "slug": "medibot-ai",
+    "title": "MediBot AI",
+    "category": "AI & Machine Learning",
+    "industry": "Healthcare",
+    "source": "DataFuzeo",
+    "sourceUrl": "https://www.datafuzeo.com/projects/medibot-ai",
+    "summary": "RAG-Powered Medical Chatbot System for Healthcare Providers.",
+    "overview": "MediBot AI is an advanced Retrieval-Augmented Generation (RAG) chatbot designed specifically for healthcare professionals. It securely ingests thousands of medical documents, clinical guidelines, and patient histories to provide instant, accurate, and source-backed answers to complex medical queries. By grounding the AI's responses in verified medical literature, MediBot AI drastically reduces hallucination risks and empowers doctors to make faster, evidence-based decisions at the point of care.",
+    "problem": "Doctors spent too much time searching through fragmented medical literature and patient histories.",
+    "approach": "A secure, HIPAA-compliant RAG chatbot that provides instant, source-backed answers to complex clinical queries.",
+    "outcome": "91% Response Accuracy · 40% Hours Saved Weekly · 2s Avg Resolution Time",
+    "metrics": [
+      {
+        "value": "91%",
+        "label": "Response Accuracy"
+      },
+      {
+        "value": "40%",
+        "label": "Hours Saved Weekly"
+      },
+      {
+        "value": "2s",
+        "label": "Avg Resolution Time"
+      }
+    ],
+    "stack": [
+      "Next.js",
+      "Python",
+      "LangChain",
+      "Pinecone",
+      "OpenAI",
+      "Tailwind CSS"
+    ],
+    "image": "/work/medibot-ai/hero.webp",
+    "client": "MediBot AI",
+    "timeline": "12 weeks",
+    "modules": [
+      {
+        "title": "Secure Provider Access",
+        "description": "A HIPAA-compliant authentication portal designed for healthcare providers. Security is paramount, requiring multi-factor authentication and strict role-based access controls to ensure patient data and proprietary medical knowledge remain protected.",
+        "bullets": [
+          "HIPAA-compliant secure login architecture",
+          "Multi-factor authentication (MFA) support",
+          "Role-based access for Doctors, Nurses, and Administrators",
+          "Audit logging for all access attempts"
+        ],
+        "images": [
+          "/work/medibot-ai/module-1-1.webp"
+        ]
+      },
+      {
+        "title": "Intelligent Search & Discovery",
+        "description": "The core interface for medical professionals to interact with the knowledge base. Featuring a clean, distraction-free design, providers can ask complex clinical questions, search for drug interactions, or review treatment guidelines using natural language.",
+        "bullets": [
+          "Natural language processing for complex medical queries",
+          "Quick-access tools for Drug Interactions, Guidelines, and Patient History",
+          "Clean, intuitive interface optimized for fast-paced clinical environments",
+          "Real-time suggestions and auto-completion based on medical terminology"
+        ],
+        "images": [
+          "/work/medibot-ai/module-2-1.webp"
+        ]
+      },
+      {
+        "title": "RAG-Powered Clinical Chat",
+        "description": "The conversational interface where the magic happens. When a provider asks a question, the system retrieves relevant medical literature and synthesizes an answer. Crucially, every claim is backed by explicit citations to the source documents, allowing doctors to verify the information instantly.",
+        "bullets": [
+          "Context-aware conversational AI tailored for healthcare",
+          "Transparent source attribution (Retrieval-Augmented Generation)",
+          "Direct links to original medical journals, guidelines, and internal docs",
+          "Ability to handle complex multi-turn clinical reasoning"
+        ],
+        "images": [
+          "/work/medibot-ai/module-3-1.webp"
+        ]
+      },
+      {
+        "title": "System Analytics & Performance",
+        "description": "A comprehensive dashboard for hospital administrators to monitor the AI's performance, usage patterns, and impact on clinical workflows. It tracks response accuracy, resolution times, and the types of queries being asked most frequently.",
+        "bullets": [
+          "Real-time monitoring of RAG pipeline accuracy and latency",
+          "Usage analytics tracking active users and query volume",
+          "Insights into common medical queries (Symptoms, Medications, etc.)",
+          "ROI metrics showing hours saved and efficiency gains"
+        ],
+        "images": [
+          "/work/medibot-ai/module-4-1.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-support-assistant",
+    "title": "AI-Powered Support Assistant",
+    "category": "Automation & AI",
+    "industry": "Customer Support",
+    "source": "DataFuzeo",
+    "sourceUrl": "https://www.datafuzeo.com/projects/ai-support-assistant",
+    "summary": "Smart Business Automation for Customer Support.",
+    "overview": "The AI-Powered Support Assistant is an intelligent automation system designed to streamline business communication and support workflows. It leverages AI, automation, and CRM integration to handle FAQs, route complex queries, and manage follow-ups — reducing manual workload and improving customer satisfaction. The system integrates seamlessly with Slack, Gmail, HubSpot CRM, and Google Sheets, enabling teams to operate faster and more efficiently.",
+    "problem": "Customer support teams faced repetitive FAQs, delayed responses, and manual data logging across platforms.",
+    "approach": "Smart AI-powered support assistant managing queries, automating workflows, and connecting Slack, Gmail, and HubSpot.",
+    "outcome": "78% Efficiency Increased · 15+ Hours Saved/Week · 2s Response Time",
+    "metrics": [
+      {
+        "value": "78%",
+        "label": "Efficiency Increased"
+      },
+      {
+        "value": "15+",
+        "label": "Hours Saved/Week"
+      },
+      {
+        "value": "2s",
+        "label": "Response Time"
+      }
+    ],
+    "stack": [
+      "OpenAI",
+      "LangChain",
+      "n8n",
+      "Python",
+      "FastAPI",
+      "PostgreSQL"
+    ],
+    "image": "/work/ai-support-assistant/hero.webp",
+    "client": "Smart Business Automation",
+    "timeline": "8 weeks",
+    "modules": [
+      {
+        "title": "Intelligent Chat Interface",
+        "description": "A clean, user-friendly chat interface that serves as the frontline for customer support. Powered by an AI FAQ engine using NLP, it instantly answers common questions, freeing up human agents for more complex issues.",
+        "bullets": [
+          "Natural Language Processing (NLP) for accurate intent recognition",
+          "Instant responses to repetitive FAQs",
+          "Seamless handoff to human agents for complex queries",
+          "Clean, distraction-free UI optimized for quick resolutions"
+        ],
+        "images": [
+          "/work/ai-support-assistant/module-1-1.webp"
+        ]
+      },
+      {
+        "title": "n8n Workflow Orchestration",
+        "description": "The backbone of the automation system. Complex workflows are visually orchestrated using n8n, connecting incoming messages from Slack or Gmail directly to the AI Agent and Vector Store for processing.",
+        "bullets": [
+          "Visual workflow builder for easy maintenance and scaling",
+          "Real-time event triggers from Slack and Gmail",
+          "Integration with Qdrant Vector Store for RAG capabilities",
+          "Automated routing based on query complexity"
+        ],
+        "images": [
+          "/work/ai-support-assistant/module-2-1.webp"
+        ]
+      },
+      {
+        "title": "Analytics & CRM Sync",
+        "description": "A comprehensive dashboard tracking the system's performance and integration health. It provides real-time insights into efficiency gains, hours saved, and ensures data remains synchronized across all business tools.",
+        "bullets": [
+          "Real-time syncing with HubSpot CRM and Google Sheets",
+          "Performance metrics tracking (Response Time, Efficiency)",
+          "Visual comparison of AI vs. Manual ticket resolution",
+          "Centralized view of all active API integrations"
+        ],
+        "images": [
+          "/work/ai-support-assistant/module-3-1.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "voice-ai-lead-qualification",
+    "title": "Voice AI Lead Qualification",
+    "category": "Voice AI",
+    "industry": "SaaS",
+    "source": "DataFuzeo",
+    "sourceUrl": "https://www.datafuzeo.com/projects/voice-ai-lead-qualification",
+    "summary": "24/7 Automated Inbound Lead Qualification and Booking.",
+    "overview": "Sales teams were losing valuable inbound leads that arrived outside of business hours or during peak call volumes. We built a 24/7 Voice AI agent capable of answering calls with human-like latency, qualifying leads based on custom criteria, and directly booking appointments into the sales team's calendar. This eliminated missed opportunities and drastically increased the pipeline.",
+    "problem": "Sales team missing 60% of inbound leads outside business hours.",
+    "approach": "24/7 voice AI agent qualifying leads and booking appointments automatically.",
+    "outcome": "3x Revenue Increase · 60% More Leads Captured · 24/7 Availability",
+    "metrics": [
+      {
+        "value": "3x",
+        "label": "Revenue Increase"
+      },
+      {
+        "value": "60%",
+        "label": "More Leads Captured"
+      },
+      {
+        "value": "24/7",
+        "label": "Availability"
+      }
+    ],
+    "stack": [
+      "Vapi.ai",
+      "OpenAI",
+      "Twilio",
+      "Node.js",
+      "Calendly API"
+    ],
+    "image": "/work/voice-ai-lead-qualification/hero.webp",
+    "client": "CallWise",
+    "timeline": "6 weeks",
+    "modules": [
+      {
+        "title": "Real-time Call Dashboard",
+        "description": "A comprehensive command center for monitoring the Voice AI agent's performance. It tracks total inbound calls, qualification rates, and meetings booked in real-time, providing complete visibility into the automated pipeline.",
+        "bullets": [
+          "Live tracking of active calls and agent status",
+          "Conversion metrics (Calls to Qualified Leads to Booked Meetings)",
+          "Call volume heatmaps to identify peak hours",
+          "Dark-mode optimized interface for continuous monitoring"
+        ],
+        "images": [
+          "/work/voice-ai-lead-qualification/module-1-1.webp"
+        ]
+      },
+      {
+        "title": "Live Call Transcripts & Extraction",
+        "description": "During every call, the system generates a live transcript and uses NLP to extract key lead data on the fly. It automatically identifies intent, budget, timeline, and company size, syncing this data directly to the CRM.",
+        "bullets": [
+          "Real-time speech-to-text transcription",
+          "Automated extraction of key qualification criteria",
+          "Sentiment and intent analysis",
+          "One-click sync to Salesforce and HubSpot"
+        ],
+        "images": [
+          "/work/voice-ai-lead-qualification/module-2-1.webp"
+        ]
+      },
+      {
+        "title": "Automated Calendar Booking",
+        "description": "Once a lead is qualified, the Voice AI agent seamlessly checks the Account Executive's availability and books a meeting directly on the call. The event is populated with all the extracted context so the AE is fully prepared.",
+        "bullets": [
+          "Direct integration with Google Calendar and Calendly",
+          "Smart timezone handling and availability checking",
+          "Automated calendar invites sent to the prospect",
+          "Rich context attached to the calendar event"
+        ],
+        "images": [
+          "/work/voice-ai-lead-qualification/module-3-1.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "automated-financial-reporting",
+    "title": "Automated Financial Reporting",
+    "category": "Automation",
+    "industry": "Finance",
+    "source": "DataFuzeo",
+    "sourceUrl": "https://www.datafuzeo.com/projects/automated-financial-reporting",
+    "summary": "AI-driven data pipelines and board-ready report generation.",
+    "overview": "Finance teams were spending 12+ hours manually consolidating data from ERPs, CRMs, and bank feeds to generate monthly reports. This process was slow, expensive, and prone to human error. We engineered an automated data pipeline that ingests data in real-time, uses AI to detect anomalies, and generates board-ready financial documents with a single click.",
+    "problem": "12-hour manual reporting process prone to human errors.",
+    "approach": "Automated data pipeline with AI-driven anomaly detection and report generation.",
+    "outcome": "95% Time Reduction · 99% Accuracy Rate · 3x Report Frequency",
+    "metrics": [
+      {
+        "value": "95%",
+        "label": "Time Reduction"
+      },
+      {
+        "value": "99%",
+        "label": "Accuracy Rate"
+      },
+      {
+        "value": "3x",
+        "label": "Report Frequency"
+      }
+    ],
+    "stack": [
+      "Python",
+      "FastAPI",
+      "Pandas",
+      "OpenAI",
+      "PostgreSQL"
+    ],
+    "image": "/work/automated-financial-reporting/hero.webp",
+    "client": "FinFlow",
+    "timeline": "10 weeks",
+    "modules": [
+      {
+        "title": "Executive Financial Dashboard",
+        "description": "A clean, high-level dashboard designed for CFOs and executives. It provides a real-time overview of total revenue, operating margins, and data accuracy, alongside AI-generated insights that highlight cash flow trends and forecast updates.",
+        "bullets": [
+          "Real-time consolidation of financial metrics",
+          "Automated AI insights and variance commentary",
+          "Interactive Revenue vs. Expenses charting",
+          "Zero manual data entry required"
+        ],
+        "images": [
+          "/work/automated-financial-reporting/module-1-1.webp"
+        ]
+      },
+      {
+        "title": "Automated Data Pipeline",
+        "description": "The backend engine powering the system. It automatically pulls data from NetSuite, Salesforce, and Plaid APIs, standardizes the formats, and runs it through an AI Auditor to flag any anomalies before the data hits the final reports.",
+        "bullets": [
+          "Direct API integrations with major ERP and CRM systems",
+          "Automated data cleaning and standardization",
+          "AI-powered anomaly detection for expense spikes",
+          "Comprehensive audit logging for compliance"
+        ],
+        "images": [
+          "/work/automated-financial-reporting/module-2-1.webp"
+        ]
+      },
+      {
+        "title": "One-Click Report Generation",
+        "description": "The final output layer. Finance teams can select a reporting period and instantly generate formatted, board-ready documents (like P&L statements and Balance Sheets) complete with AI-written executive summaries.",
+        "bullets": [
+          "Customizable report templates (Board Deck, Internal, etc.)",
+          "AI-generated executive summaries explaining variances",
+          "Export to PDF and Excel formats",
+          "Reduces reporting time from days to minutes"
+        ],
+        "images": [
+          "/work/automated-financial-reporting/module-3-1.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "intelligent-document-processing",
+    "title": "Intelligent Document Processing",
+    "category": "RAG",
+    "industry": "Healthcare",
+    "source": "DataFuzeo",
+    "sourceUrl": "https://www.datafuzeo.com/projects/intelligent-document-processing",
+    "summary": "Automated data extraction from unstructured documents.",
+    "overview": "A healthcare administration team was manually reviewing and entering data from thousands of medical records, invoices, and insurance claims every week. This process was slow, expensive, and prone to errors. We built an Intelligent Document Processing (IDP) system that automatically ingests documents, uses AI to extract structured data with high confidence, and syncs it directly to their database.",
+    "problem": "Manual review of thousands of medical documents per week.",
+    "approach": "RAG-based document processing system with structured data extraction.",
+    "outcome": "90% Processing Speed Up · 50k Docs/Month Processed · 98% Extraction Accuracy",
+    "metrics": [
+      {
+        "value": "90%",
+        "label": "Processing Speed Up"
+      },
+      {
+        "value": "50k",
+        "label": "Docs/Month Processed"
+      },
+      {
+        "value": "98%",
+        "label": "Extraction Accuracy"
+      }
+    ],
+    "stack": [
+      "Python",
+      "LangChain",
+      "AWS Textract",
+      "OpenAI",
+      "React"
+    ],
+    "image": "/work/intelligent-document-processing/hero.webp",
+    "client": "HealthData Systems",
+    "timeline": "8 weeks",
+    "modules": [
+      {
+        "title": "Centralized Processing Dashboard",
+        "description": "A command center for operations managers to monitor the document pipeline. It provides real-time metrics on documents processed, extraction accuracy, and average processing time, along with a live feed of recent extractions.",
+        "bullets": [
+          "Real-time processing metrics and volume tracking",
+          "Live feed of document status and confidence scores",
+          "Searchable archive of all processed documents",
+          "Dark-mode optimized for continuous monitoring"
+        ],
+        "images": [
+          "/work/intelligent-document-processing/module-1-1.webp"
+        ]
+      },
+      {
+        "title": "AI-Powered Extraction Engine",
+        "description": "The core interface where users can view the original document side-by-side with the extracted data. The AI highlights exactly where it found the information on the page, providing transparency and making human review incredibly fast.",
+        "bullets": [
+          "Side-by-side document and data view",
+          "Visual bounding boxes highlighting extracted text",
+          "Field-level confidence scores",
+          "One-click approval and sync to external systems"
+        ],
+        "images": [
+          "/work/intelligent-document-processing/module-2-1.webp"
+        ]
+      },
+      {
+        "title": "Automated Workflow Pipeline",
+        "description": "The backend architecture that powers the system. Documents are ingested via email or API, classified by type, processed through OCR and LLMs, and then routed based on confidence scores. High-confidence data is synced automatically, while low-confidence data is flagged for human review.",
+        "bullets": [
+          "Multi-channel document ingestion (Email, API, Upload)",
+          "Automated document classification (Invoice, Record, Contract)",
+          "Smart routing based on confidence thresholds",
+          "Human-in-the-loop fallback for edge cases"
+        ],
+        "images": [
+          "/work/intelligent-document-processing/module-3-1.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "nexa-ai-voice-receptionist",
+    "title": "Nexa — AI Voice Receptionist",
+    "category": "Voice AI",
+    "industry": "SaaS",
+    "source": "DataFuzeo",
+    "sourceUrl": "https://www.datafuzeo.com/projects/nexa-ai-voice-receptionist",
+    "summary": "Real-time conversational AI for automated appointment booking.",
+    "overview": "Nexa is an advanced AI voice agent designed to handle real-time, natural conversations for automated appointment booking. Built using Vapi.ai, Nexa simulates a human receptionist capable of greeting clients, collecting essential details (name, date, time, service type), and confirming appointments automatically. This project demonstrates a realistic, voice-driven customer interaction system that reduces manual effort while maintaining a natural conversational experience.",
+    "problem": "Manual booking workflows and rigid IVR menus were frustrating callers and overloading staff.",
+    "approach": "No-code AI voice receptionist built on Vapi.ai to handle real-time appointment booking with human-like dialogue.",
+    "outcome": "98% Completion Rate · 85% Workload Reduced · 3s Avg Response Time",
+    "metrics": [
+      {
+        "value": "98%",
+        "label": "Completion Rate"
+      },
+      {
+        "value": "85%",
+        "label": "Workload Reduced"
+      },
+      {
+        "value": "3s",
+        "label": "Avg Response Time"
+      }
+    ],
+    "stack": [
+      "Vapi.ai",
+      "GPT-4",
+      "Calendly API",
+      "Webhooks"
+    ],
+    "image": "/work/nexa-ai-voice-receptionist/hero.webp",
+    "client": "Nexa Corporation",
+    "timeline": "2 weeks",
+    "modules": [
+      {
+        "title": "Live Call Dashboard",
+        "description": "A real-time monitoring interface for active calls. It displays caller information, call duration, and a live waveform visualization of the AI's voice, allowing operators to oversee the automated receptionist's performance.",
+        "bullets": [
+          "Real-time caller identification and status",
+          "Live voice waveform visualization",
+          "Instant data extraction display (Name, Date, Time)",
+          "Active agent status monitoring"
+        ],
+        "images": [
+          "/work/nexa-ai-voice-receptionist/module-1-1.webp"
+        ]
+      },
+      {
+        "title": "Conversational Intelligence",
+        "description": "Powered by advanced LLMs and prompt engineering, Nexa maintains human-like speech patterns and contextual memory. It dynamically handles user responses, re-asks questions if information is unclear, and confirms details politely.",
+        "bullets": [
+          "Dynamic prompt response and re-asking",
+          "Memory of prior context during the call",
+          "Friendly and professional voice tone",
+          "Fallback handling for incomplete data"
+        ],
+        "images": [
+          "/work/nexa-ai-voice-receptionist/module-2-1.webp"
+        ]
+      },
+      {
+        "title": "Automated Scheduling",
+        "description": "Once the AI collects all necessary information, it seamlessly integrates with calendar systems to book the appointment. The system automatically syncs the extracted data and triggers confirmation workflows.",
+        "bullets": [
+          "Direct integration with calendar APIs",
+          "Automated conflict resolution and availability checking",
+          "Instant booking confirmation",
+          "Ready for business integration via webhooks"
+        ],
+        "images": [
+          "/work/nexa-ai-voice-receptionist/module-3-1.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "aura-ai",
+    "title": "AURA — AI Document Intelligence",
+    "category": "RAG",
+    "industry": "Internal R&D",
+    "source": "DataFuzeo",
+    "sourceUrl": "https://www.datafuzeo.com/projects/aura-ai",
+    "summary": "Local, offline RAG and LangGraph-powered document reasoning.",
+    "overview": "AURA (AI Understanding and Retrieval Assistant) is an advanced LLM-powered knowledge extraction and reasoning system built on Retrieval-Augmented Generation (RAG) and LangGraph workflows. It redefines how users interact with documents by enabling semantic understanding, question answering, and summarization of large PDFs, all executed locally without API limits. By fusing RAG and LangGraph orchestration, AURA sets a new benchmark in retrieval-augmented reasoning, showcasing how locally deployable AI systems can rival enterprise-level intelligence platforms while remaining cost-efficient and privacy-preserving.",
+    "problem": "Traditional document search lacked context awareness while cloud AI raised privacy and cost concerns.",
+    "approach": "Modular offline RAG + LangGraph pipeline for retrieval, reasoning, memory continuity, and explainable responses.",
+    "outcome": "95% Review Time Reduced · 82% Factuality Lift · 5s Avg Response Time",
+    "metrics": [
+      {
+        "value": "95%",
+        "label": "Review Time Reduced"
+      },
+      {
+        "value": "82%",
+        "label": "Factuality Lift"
+      },
+      {
+        "value": "5s",
+        "label": "Avg Response Time"
+      }
+    ],
+    "stack": [
+      "Python",
+      "LangGraph",
+      "FAISS",
+      "Hugging Face",
+      "Streamlit"
+    ],
+    "image": "/work/aura-ai/hero.webp",
+    "client": "Internal R&D",
+    "timeline": "4 weeks",
+    "modules": [
+      {
+        "title": "LangGraph Workflow Orchestration",
+        "description": "Implemented a graph-based reasoning flow using LangGraph where nodes represent core reasoning units—retrieval, synthesis, validation, and response generation. This modular flow ensures interpretability and enables flexible orchestration between retrieval and generation steps.",
+        "bullets": [
+          "Dynamic routing between retrieval and generation pathways",
+          "Multi-turn context preservation across LangGraph nodes",
+          "Fact validation to prevent LLM hallucinations",
+          "Modular architecture for easy model swapping"
+        ],
+        "images": [
+          "/work/aura-ai/module-1-1.webp"
+        ]
+      },
+      {
+        "title": "Local RAG & FAISS Vector Store",
+        "description": "Constructed a hybrid RAG pipeline that integrates semantic retrieval with context-aware response generation. We generated dense embeddings using Hugging Face sentence-transformers and indexed them via FAISS for high-speed, low-latency vector similarity search.",
+        "bullets": [
+          "100% offline inference avoiding API costs and ensuring data privacy",
+          "Intelligent semantic chunking for embedding alignment",
+          "High-speed local FAISS vector indexing",
+          "PDF parsing for multi-column text, tables, and metadata"
+        ],
+        "images": [
+          "/work/aura-ai/module-2-1.webp"
+        ]
+      },
+      {
+        "title": "Interactive Document UI",
+        "description": "A Streamlit-based interactive frontend that allows users to upload documents, ask questions, and receive real-time answers. Every response is grounded in retrieved evidence, providing exact citations and page numbers rather than hallucinated text.",
+        "bullets": [
+          "Async query interface for real-time answers",
+          "Citation-backed responses with source referencing",
+          "Dynamic query visualization and summarization",
+          "Persistent local FAISS index for fast reloads"
+        ],
+        "images": [
+          "/work/aura-ai/module-3-1.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "charm-ai",
+    "title": "CHARM",
+    "category": "Computer Vision & Edge AI",
+    "industry": "Agriculture",
+    "source": "DataFuzeo",
+    "sourceUrl": "https://www.datafuzeo.com/projects/charm-ai",
+    "summary": "Chicken Health Assessment and Remote Monitoring via Edge AI.",
+    "overview": "CHARM (Chicken Health Assessment and Remote Monitoring) is an advanced AgriTech platform that leverages edge computing and computer vision to monitor poultry health in real-time. By deploying YOLOv8 object detection and BoT-SORT tracking algorithms directly on edge cameras within the poultry houses, CHARM continuously analyzes flock behavior, detects anomalies like reduced activity or clustering, and identifies early signs of diseases such as Fowl Pox. This proactive monitoring system alerts farmers instantly, reducing mortality rates and improving overall flock welfare without requiring constant manual inspection.",
+    "problem": "Manual poultry health checks were slow, subjective, and difficult to scale across large flocks.",
+    "approach": "AI-powered monitoring platform combining real-time detection, disease classification, and automated alerts for farm-wide health visibility.",
+    "outcome": "92% Classification Accuracy · 75% Early Detection Lift · 15s Diagnostic Time",
+    "metrics": [
+      {
+        "value": "92%",
+        "label": "Classification Accuracy"
+      },
+      {
+        "value": "75%",
+        "label": "Early Detection Lift"
+      },
+      {
+        "value": "15s",
+        "label": "Diagnostic Time"
+      }
+    ],
+    "stack": [
+      "React",
+      "Tailwind CSS",
+      "YOLOv8",
+      "BoT-SORT",
+      "AWS IoT",
+      "Python"
+    ],
+    "image": "/work/charm-ai/hero.webp",
+    "client": "AgriTech Solutions",
+    "timeline": "14 weeks",
+    "modules": [
+      {
+        "title": "Real-Time Flock Monitoring Dashboard",
+        "description": "The central command center for farm managers. It provides a live video feed overlaid with real-time AI detections, showing individual bird health scores and tracking paths. The dashboard aggregates data across multiple sectors, offering an instant overview of total detected birds, health percentages, and active alerts.",
+        "bullets": [
+          "Live RTSP video streaming with YOLOv8 bounding box overlays",
+          "Real-time health scoring (e.g., Healthy 98%, Fowl Pox 92%)",
+          "Multi-sector farm selector for large-scale operations",
+          "Instant visual indicators for active health alerts and anomalies"
+        ],
+        "images": [
+          "/work/charm-ai/module-1-1.webp"
+        ]
+      },
+      {
+        "title": "Edge-to-Cloud Computer Vision Pipeline",
+        "description": "A visualization of the underlying technical architecture. Video feeds are processed locally on edge devices using YOLOv8 for object detection and BoT-SORT for multi-object tracking. Behavioral analysis algorithms detect anomalies, and only critical alerts and metadata are synced to the cloud (AWS) to minimize bandwidth usage in rural areas.",
+        "bullets": [
+          "Edge processing to ensure low latency and reduced bandwidth costs",
+          "YOLOv8 integration for high-accuracy poultry detection",
+          "BoT-SORT tracking to monitor individual bird movement over time",
+          "Cloud synchronization for historical data storage and SMS/Email alerts via Twilio"
+        ],
+        "images": [
+          "/work/charm-ai/module-2-1.webp"
+        ]
+      },
+      {
+        "title": "Health Analytics & Environmental Correlation",
+        "description": "Deep dive analytics correlating flock activity with environmental factors. The system tracks the 'Flock Activity Index' over time, automatically flagging sudden drops in movement. It also overlays temperature and humidity data, helping farmers identify if behavioral changes are due to disease or environmental stress (e.g., heat stress).",
+        "bullets": [
+          "24-hour Flock Activity Index charting with automated anomaly detection",
+          "Environmental monitoring (Temperature & Humidity) correlated with bird behavior",
+          "Categorized alert feed (Critical, Warning, Info) with specific locations and timestamps",
+          "Automated daily health report generation for veterinary review"
+        ],
+        "images": [
+          "/work/charm-ai/module-3-1.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "homii",
+    "title": "Homii",
+    "category": "AI Chatbot & Geolocation",
+    "industry": "Real Estate",
+    "source": "DataFuzeo",
+    "sourceUrl": "https://www.datafuzeo.com/projects/homii",
+    "summary": "AI-Powered Real Estate Chatbot for Dubai Property Discovery.",
+    "overview": "Homii is an intelligent real estate chatbot built specifically for the Dubai property market. It aggregates thousands of scraped property listings and enables users to discover their ideal apartment through natural conversation. Users simply describe what they need — budget, bedrooms, location preferences — and Homii instantly filters and presents matching properties within a 5 km radius. What sets Homii apart is its deep amenity-aware filtering: users can prioritize proximity to gyms, grocery stores, schools, parks, and other amenities. Powered by real-time Google Maps integration, Homii calculates actual walking/driving distances and ranks properties as Best Match, Good Match, or Weak Match based on how well they align with the user's lifestyle priorities.",
+    "problem": "Dubai's property market is overwhelming — thousands of listings with no easy way to filter by lifestyle needs like proximity to gyms, groceries, or schools.",
+    "approach": "An AI chatbot that scrapes live listings and uses Google Maps integration to rank and filter properties within 5 km based on amenity proximity and user preferences.",
+    "outcome": "90% Search Time Reduced · 5km Proximity Radius · 3s Avg Match Time",
+    "metrics": [
+      {
+        "value": "90%",
+        "label": "Search Time Reduced"
+      },
+      {
+        "value": "5km",
+        "label": "Proximity Radius"
+      },
+      {
+        "value": "3s",
+        "label": "Avg Match Time"
+      }
+    ],
+    "stack": [
+      "Django",
+      "Python",
+      "Tailwind CSS",
+      "Google Maps API",
+      "PostgreSQL",
+      "OpenAI",
+      "BeautifulSoup"
+    ],
+    "image": "/work/homii/hero.webp",
+    "client": "Homii",
+    "timeline": "10 weeks",
+    "modules": [
+      {
+        "title": "Conversational Property Discovery",
+        "description": "The heart of Homii — a natural language chatbot interface where users describe their ideal property. The AI parses intent, extracts filters (budget, bedrooms, location, amenities), and returns a curated list of matching properties. The interface is clean, mobile-first, and designed for quick decision-making in the fast-paced Dubai rental market.",
+        "bullets": [
+          "Natural language understanding for property queries (e.g., 'I need a 2BHK near Dubai Marina under 80k')",
+          "Intelligent filter extraction — budget range, bedrooms, area, property type",
+          "Conversational follow-ups to refine results without restarting the search",
+          "Mobile-optimized chat UI built with Tailwind CSS for seamless on-the-go browsing"
+        ],
+        "images": [
+          "/work/homii/module-1-1.webp"
+        ]
+      },
+      {
+        "title": "Google Maps Integration & Proximity Search",
+        "description": "Every property result is enriched with real-time geolocation data via Google Maps API. Users see properties plotted on an interactive map within a 5 km radius of their preferred location. Distance calculations to key amenities (gyms, grocery stores, metro stations) are computed in real-time, giving users a complete picture of their neighborhood before they even visit.",
+        "bullets": [
+          "Real-time Google Maps integration with interactive property markers",
+          "5 km radius proximity search centered on user's preferred location",
+          "Walking and driving distance calculations to nearby amenities",
+          "Neighborhood overview showing restaurants, parks, schools, and transit options"
+        ],
+        "images": [
+          "/work/homii/module-2-1.webp"
+        ]
+      },
+      {
+        "title": "Smart Match Ranking & Amenity Filtering",
+        "description": "Homii goes beyond basic property search by scoring each listing against the user's lifestyle preferences. Properties are ranked as Best Match, Good Match, or Weak Match based on proximity to selected amenities, price alignment, and overall suitability. Users can toggle filters for specific amenities like gym, grocery store, pharmacy, or park to see how rankings shift in real-time.",
+        "bullets": [
+          "Tri-tier match ranking — Best Match, Good Match, and Weak Match with visual indicators",
+          "Amenity-based filtering: gym, grocery, pharmacy, park, school, metro proximity",
+          "Dynamic re-ranking when users adjust amenity priorities",
+          "Side-by-side comparison of top-ranked properties with amenity scorecards"
+        ],
+        "images": [
+          "/work/homii/module-3-1.webp"
+        ]
+      },
+      {
+        "title": "Property Detail & Scraped Listings Engine",
+        "description": "Behind the scenes, Homii continuously scrapes and updates property listings from major Dubai real estate portals. Each listing is enriched with structured data — rent price, area size, floor plan, building amenities, and agent contact info. The detail view provides users with all the information they need to make a decision, complete with high-res images and a direct inquiry option.",
+        "bullets": [
+          "Automated web scraping pipeline using BeautifulSoup and Scrapy for real-time listing data",
+          "Structured property profiles with price, size, floor plan, and building amenities",
+          "High-resolution image galleries extracted from source listings",
+          "One-click inquiry to connect with property agents directly from the chat"
+        ],
+        "images": [
+          "/work/homii/module-4-1.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "answerly",
+    "title": "Answerly",
+    "category": "RAG",
+    "industry": "RAG",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/answerly",
+    "summary": "An AI-powered Q&A system for e-learning platforms that delivers instant, accurate answers using RAG, FAISS semantic search, and HuggingFace embeddings over a structured knowledge base.",
+    "overview": "An AI-powered Q&A system for e-learning platforms that delivers instant, accurate answers using RAG, FAISS semantic search, and HuggingFace embeddings over a structured knowledge base.",
+    "problem": "E-learning platforms received high volumes of repetitive student support queries that overwhelmed human staff.",
+    "problemPoints": [
+      "E-learning platforms received high volumes of repetitive student support queries that overwhelmed human staff.",
+      "Students had no real-time tool to get precise answers from course materials outside business hours.",
+      "Keyword-based search in LMS platforms failed to return contextually relevant answers to student questions.",
+      "Manual support teams could not scale to match student query volume during exam periods and course launches.",
+      "No automated system could provide consistent, accurate responses grounded in verified course content."
+    ],
+    "approach": "Built a RAG-powered Q&A engine using Google Gemini Pro and LangChain over a CSV-based e-learning knowledge base.",
+    "approachPoints": [
+      "Built a RAG-powered Q&A engine using Google Gemini Pro and LangChain over a CSV-based e-learning knowledge base.",
+      "Implemented FAISS vector store with HuggingFace embeddings for fast, semantic similarity search over course content.",
+      "Developed a Streamlit chat interface delivering context-aware, real-time responses to student queries.",
+      "Designed the ingestion pipeline to process structured course content, policies, and FAQs into searchable vectors.",
+      "Ensured response accuracy by grounding every answer in retrieved knowledge base passages before generation."
+    ],
+    "outcome": "Reduced average query resolution time by 80% and eliminated redundant manual searches across departments.",
+    "metrics": [
+      {
+        "value": "80% faster",
+        "label": "query resolution"
+      }
+    ],
+    "stack": [
+      "Python",
+      "Streamlit",
+      "LangChain",
+      "HuggingFace",
+      "Gemini"
+    ],
+    "image": "/work/answerly/hero.webp"
+  },
+  {
+    "slug": "sehat-guftagu",
+    "title": "Sehat Guftagu",
+    "category": "RAG",
+    "industry": "RAG",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/sehat-guftagu",
+    "summary": "An AI-powered clinical interview and triage system that conducts bilingual Urdu/English voice interviews, generates SOAP medical reports, and provides a dedicated doctor review portal.",
+    "overview": "An AI-powered clinical interview and triage system that conducts bilingual Urdu/English voice interviews, generates SOAP medical reports, and provides a dedicated doctor review portal.",
+    "problem": "Clinics lacked a scalable system to conduct structured patient interviews before physician appointments.",
+    "problemPoints": [
+      "Clinics lacked a scalable system to conduct structured patient interviews before physician appointments.",
+      "Bilingual Urdu/English patients had no AI-powered tool that understood both languages for medical queries.",
+      "Doctors had no automated way to receive pre-structured patient information ahead of consultations.",
+      "Existing health chatbots could not generate standardised SOAP medical reports or flag emergency red flags.",
+      "Language barriers and limited clinical hours created significant gaps in timely patient-physician communication."
+    ],
+    "approach": "Architected a full-stack clinical interview system using Next.js, LangGraph, and Groq (LLaMA 3.3 70B) for AI orchestration.",
+    "approachPoints": [
+      "Architected a full-stack clinical interview system using Next.js, LangGraph, and Groq (LLaMA 3.3 70B) for AI orchestration.",
+      "Built voice-based bilingual interviews using ElevenLabs, automatically transcribing and structuring patient responses.",
+      "Implemented Pinecone-based RAG for medical knowledge retrieval to support evidence-based response generation.",
+      "Developed automated SOAP report generation from interview transcripts and emergency red-flag triage detection.",
+      "Created a dedicated doctor portal for reviewing AI-generated reports, approvals, and prescription workflows."
+    ],
+    "outcome": "Enabled thousands of users to access reliable health consultations in their native language, reducing unnecessary clinic visits.",
+    "metrics": [
+      {
+        "value": "Multi-lingual",
+        "label": "health AI platform"
+      }
+    ],
+    "stack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "PostgreSQL",
+      "Prisma",
+      "LangChain",
+      "ElevenLabs"
+    ],
+    "image": "/work/sehat-guftagu/hero.webp"
+  },
+  {
+    "slug": "legaledge",
+    "title": "LegalEdge AI",
+    "category": "NLP",
+    "industry": "NLP",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/legaledge",
+    "summary": "A multi-agent AI legal platform that analyzes contracts, identifies risks, checks compliance, and generates detailed reports through four specialized AI agents working in coordination.",
+    "overview": "A multi-agent AI legal platform that analyzes contracts, identifies risks, checks compliance, and generates detailed reports through four specialized AI agents working in coordination.",
+    "problem": "Legal professionals spent 4–8 hours manually reviewing a single complex contract end-to-end.",
+    "problemPoints": [
+      "Legal professionals spent 4–8 hours manually reviewing a single complex contract end-to-end.",
+      "Critical liability clauses were routinely missed inside hundreds of pages of dense legal language.",
+      "No automated tool reliably identified jurisdiction-specific risk patterns across contract types.",
+      "Inconsistent manual review quality led to contested clauses, financial penalties, and disputes.",
+      "High per-hour legal review costs made thorough contract analysis inaccessible to smaller organisations."
+    ],
+    "approach": "Built a multi-agent system with four specialised agents: Legal Advisor, Contract Analyst, Legal Strategist, and Team Lead.",
+    "approachPoints": [
+      "Built a multi-agent system with four specialised agents: Legal Advisor, Contract Analyst, Legal Strategist, and Team Lead.",
+      "Implemented intelligent PDF chunking and semantic search via ChromaDB for precise clause-level document retrieval.",
+      "Designed a risk identification pipeline flagging high-exposure clauses with severity classifications and recommendations.",
+      "Generated comprehensive structured reports covering compliance, risk summary, and actionable legal recommendations.",
+      "Deployed as a locally-runnable system on firm infrastructure, ensuring complete data privacy for sensitive documents."
+    ],
+    "outcome": "Reduced document review time by 70%, improved risk detection accuracy, and enabled the firm to handle growing workloads without proportional staff increases.",
+    "metrics": [
+      {
+        "value": "70% faster",
+        "label": "document review"
+      }
+    ],
+    "stack": [
+      "Python",
+      "Streamlit",
+      "Gemini"
+    ],
+    "image": "/work/legaledge/hero.webp"
+  },
+  {
+    "slug": "querywise",
+    "title": "QueryWise",
+    "category": "RAG",
+    "industry": "RAG",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/querywise",
+    "summary": "A multi-agent retrieval-augmented generation system enabling intelligent document querying with hallucination prevention and enterprise-grade answer verification.",
+    "overview": "A multi-agent retrieval-augmented generation system enabling intelligent document querying with hallucination prevention and enterprise-grade answer verification.",
+    "problem": "Document QA tools hallucinated confident-sounding answers when queries fell outside uploaded document scope.",
+    "problemPoints": [
+      "Document QA tools hallucinated confident-sounding answers when queries fell outside uploaded document scope.",
+      "Single-stage retrieval lacked a verification layer, returning plausible but unverified answers from collections.",
+      "Non-technical users had no accessible interface for querying PDF, DOCX, and TXT documents through natural language.",
+      "Keyword-only search missed semantically relevant passages, producing incomplete or misleading retrieval results.",
+      "No system combined hybrid retrieval, multi-document handling, and structured parsing in a single accessible tool."
+    ],
+    "approach": "Built a multi-agent RAG system using LangChain and LangGraph with hybrid BM25 and vector embedding retrieval.",
+    "approachPoints": [
+      "Built a multi-agent RAG system using LangChain and LangGraph with hybrid BM25 and vector embedding retrieval.",
+      "Integrated Docling for structured, layout-aware parsing of PDFs, DOCX, and TXT documents.",
+      "Implemented a dedicated fact-verification agent that cross-checks generated answers against retrieved source passages.",
+      "Added scope detection to identify and decline out-of-context queries, preventing hallucinated responses.",
+      "Developed a Gradio web interface supporting document upload and natural language querying for non-technical users."
+    ],
+    "outcome": "Delivered enterprise-grade document intelligence with multi-agent answer verification, suitable for research and business document workflows.",
+    "metrics": [
+      {
+        "value": "Hallucination-free",
+        "label": "document Q&A"
+      }
+    ],
+    "stack": [
+      "Python",
+      "LangChain",
+      "Gradio"
+    ],
+    "image": "/work/querywise/hero.webp"
+  },
+  {
+    "slug": "chapal",
+    "title": "CHAPAL",
+    "category": "AI Agents",
+    "industry": "AI Agents",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/chapal",
+    "summary": "An AI safety and auditing platform that improves trust and reliability in LLM-based systems through dual-layer threat protection and human-in-the-loop governance.",
+    "overview": "An AI safety and auditing platform that improves trust and reliability in LLM-based systems through dual-layer threat protection and human-in-the-loop governance.",
+    "problem": "LLM deployments had no robust defences against prompt injection, PII leakage, and real-time policy violations.",
+    "problemPoints": [
+      "LLM deployments had no robust defences against prompt injection, PII leakage, and real-time policy violations.",
+      "Hallucinations, unsafe advice, and toxic outputs from LLMs created serious production reliability risks.",
+      "No unified auditing layer gave administrators visibility into flagged AI responses before reaching end users.",
+      "Teams lacked a structured feedback loop for continuously improving AI safety policies from real interaction data.",
+      "Testing adversarial scenarios required manual effort with no repeatable developer simulation tooling."
+    ],
+    "approach": "Implemented a deterministic guard layer for high-speed mitigation of prompt injection and PII leakage threats.",
+    "approachPoints": [
+      "Implemented a deterministic guard layer for high-speed mitigation of prompt injection and PII leakage threats.",
+      "Built a semantic auditing layer using Llama 3.1 via Groq and Google Gemini to detect hallucinations and unsafe content.",
+      "Designed a Human-in-the-Loop workflow enabling administrators to review, block, or rewrite flagged AI responses.",
+      "Created transparent analytics dashboards covering safety scoring and sentiment tracking across all interactions.",
+      "Developed developer simulation tools for testing adversarial prompts and validating safety policy improvements."
+    ],
+    "outcome": "Delivered a production-grade LLM governance system enabling continuous safety improvement through human oversight and automated dual-layer protection.",
+    "metrics": [
+      {
+        "value": "Dual-layer",
+        "label": "LLM protection"
+      }
+    ],
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Prisma",
+      "Gemini"
+    ],
+    "image": "/work/chapal/hero.webp"
+  },
+  {
+    "slug": "eidos",
+    "title": "EIDOS",
+    "category": "Full-Stack",
+    "industry": "Full-Stack",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/eidos",
+    "summary": "An AI-powered learning platform that converts raw lectures and unstructured content into structured notes, adaptive quizzes, and full courses through intelligent transcription and generation.",
+    "overview": "An AI-powered learning platform that converts raw lectures and unstructured content into structured notes, adaptive quizzes, and full courses through intelligent transcription and generation.",
+    "problem": "Learners had no automated system to convert lecture recordings into structured, searchable study notes.",
+    "problemPoints": [
+      "Learners had no automated system to convert lecture recordings into structured, searchable study notes.",
+      "Course creation was a manual, time-intensive process requiring instructors to write notes, quizzes, and curriculum from scratch.",
+      "Existing learning platforms lacked AI personalisation, delivering identical content regardless of learner progress or gaps.",
+      "No unified tool combined lecture capture, transcription, note generation, and interactive tutoring in one workflow.",
+      "Students lacked an always-available, context-aware AI tutor that could answer follow-up questions on lecture material."
+    ],
+    "approach": "Built a Next.js 14 platform with real-time lecture capture and speech-to-text transcription powered by Google Gemini AI.",
+    "approachPoints": [
+      "Built a Next.js 14 platform with real-time lecture capture and speech-to-text transcription powered by Google Gemini AI.",
+      "Implemented one-click AI-generated structured notes and full course generation directly from lecture recordings.",
+      "Developed adaptive quizzes automatically created from lecture content to reinforce comprehension and surface knowledge gaps.",
+      "Created an interactive, context-aware AI tutor with voice support for continuous personalised learning assistance.",
+      "Architected the full system end-to-end covering frontend UI, backend APIs, Prisma + MongoDB schema, and AI workflow orchestration."
+    ],
+    "outcome": "Enabled learners to go from raw lecture recordings to structured notes, adaptive quizzes, and full courses automatically, eliminating hours of manual study material creation.",
+    "metrics": [
+      {
+        "value": "Real-time",
+        "label": "lecture-to-course AI"
+      }
+    ],
+    "stack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "MongoDB",
+      "Prisma",
+      "Gemini"
+    ],
+    "image": "/work/eidos/hero.webp"
+  },
+  {
+    "slug": "ai-helpdesk-rag",
+    "title": "AI HelpDesk RAG",
+    "category": "RAG",
+    "industry": "RAG",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/ai-helpdesk-rag",
+    "summary": "An AI-powered helpdesk chatbot for university students providing instant, accurate answers about campus policies, handbooks, and guidelines through RAG and web scraping.",
+    "overview": "An AI-powered helpdesk chatbot for university students providing instant, accurate answers about campus policies, handbooks, and guidelines through RAG and web scraping.",
+    "problem": "University students wasted hours digging through lengthy PDFs and outdated websites to find simple policy answers.",
+    "problemPoints": [
+      "University students wasted hours digging through lengthy PDFs and outdated websites to find simple policy answers.",
+      "No centralised, conversational tool existed for students to query campus handbooks and guidelines in real time.",
+      "Support staff were overwhelmed by repetitive queries about admission policies, exam schedules, and campus rules.",
+      "Static FAQ pages went stale quickly as policies changed, giving students outdated or contradictory information.",
+      "New students especially lacked quick access to the institutional knowledge needed to navigate campus life effectively."
+    ],
+    "approach": "Built a RAG-based chatbot combining web scraping of university websites with ingestion of student handbooks.",
+    "approachPoints": [
+      "Built a RAG-based chatbot combining web scraping of university websites with ingestion of student handbooks.",
+      "Implemented a dual-model architecture: one model for document summarisation, another for conversational response generation.",
+      "Designed a Streamlit interface optimised for ease of use, enabling students to get answers in plain conversational language.",
+      "Created a vector database pipeline processing and indexing large university policy documents for semantic search.",
+      "Optimised the retrieval pipeline to handle large datasets efficiently, maintaining fast response times at scale."
+    ],
+    "outcome": "Resolved 70% of support queries without human intervention, dramatically reducing ticket backlog.",
+    "metrics": [
+      {
+        "value": "70% automated",
+        "label": "support resolution"
+      }
+    ],
+    "stack": [
+      "Python",
+      "Streamlit",
+      "LangChain",
+      "OpenAI",
+      "Gemini"
+    ],
+    "image": "/work/ai-helpdesk-rag/hero.webp"
+  },
+  {
+    "slug": "healthchat-pro",
+    "title": "HealthChat Pro",
+    "category": "NLP",
+    "industry": "NLP",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/healthchat-pro",
+    "summary": "A production-grade medical chatbot providing evidence-based health information through an intuitive conversational interface.",
+    "overview": "A production-grade medical chatbot providing evidence-based health information through an intuitive conversational interface.",
+    "problem": "Patients needed reliable health information between appointments but existing chatbots gave generic, unsafe responses.",
+    "problemPoints": [
+      "Patients needed reliable health information between appointments but existing chatbots gave generic, unsafe responses.",
+      "High hallucination rates in general-purpose LLMs made them unsafe for medical guidance contexts.",
+      "Healthcare providers had no scalable solution to handle routine patient inquiries outside office hours.",
+      "Regulatory risk from medically inaccurate AI output created liability concerns for healthcare operators.",
+      "Language diversity in consumer health platforms limited equitable access across patient populations."
+    ],
+    "approach": "Built a medically-informed chatbot with RAG architecture grounding responses in verified clinical guidelines.",
+    "approachPoints": [
+      "Built a medically-informed chatbot with RAG architecture grounding responses in verified clinical guidelines.",
+      "Implemented medical knowledge retrieval to minimise hallucinations and eliminate dangerous advice.",
+      "Deployed on AWS with Docker for scalable, HIPAA-aligned infrastructure and high availability.",
+      "Integrated HuggingFace embeddings for precise semantic matching against curated medical literature.",
+      "Added clear emergency escalation pathways routing critical presentations to human medical professionals."
+    ],
+    "outcome": "Delivered reliable health guidance with 95% user satisfaction, reducing unnecessary follow-up calls to clinics.",
+    "metrics": [
+      {
+        "value": "95% satisfaction",
+        "label": "user rating"
+      }
+    ],
+    "stack": [
+      "Flask",
+      "OpenAI",
+      "HuggingFace",
+      "Docker",
+      "AWS"
+    ],
+    "image": "/work/healthchat-pro/hero.webp"
+  },
+  {
+    "slug": "automatic-number-plate-recognition",
+    "title": "Automatic No Plate Recognition",
+    "category": "Computer Vision",
+    "industry": "Computer Vision",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/automatic-number-plate-recognition",
+    "summary": "A real-time number plate detection and recognition system powered by YOLOv9, built for traffic monitoring and automated vehicle identification.",
+    "overview": "A real-time number plate detection and recognition system powered by YOLOv9, built for traffic monitoring and automated vehicle identification.",
+    "problem": "Manual plate identification at checkpoints caused traffic congestion during peak hours.",
+    "problemPoints": [
+      "Manual plate identification at checkpoints caused traffic congestion during peak hours.",
+      "Human operators struggled to reliably read plates under low light, rain, and partial occlusion.",
+      "No real-time system could cross-reference plates against vehicle databases at motorway speeds.",
+      "High miss rates on damaged or non-standard plates created security and compliance gaps.",
+      "Manual logging was inconsistent and error-prone, compromising audit trail integrity in regulated environments."
+    ],
+    "approach": "Developed a YOLOv9-based detection pipeline achieving real-time plate localisation across video streams.",
+    "approachPoints": [
+      "Developed a YOLOv9-based detection pipeline achieving real-time plate localisation across video streams.",
+      "Implemented OCR post-processing optimised for varied fonts, angles, and international plate formats.",
+      "Built a multi-condition training dataset covering night, wet weather, and partial occlusion scenarios.",
+      "Designed a database integration API enabling instant real-time plate cross-referencing at scale.",
+      "Optimised the inference pipeline to process multiple simultaneous video feeds on standard hardware."
+    ],
+    "outcome": "Enabled automated vehicle identification at scale, processing hundreds of plates per minute with 97% accuracy.",
+    "metrics": [
+      {
+        "value": "97% accuracy",
+        "label": "plate recognition"
+      }
+    ],
+    "stack": [
+      "Python",
+      "YOLO",
+      "OpenCV"
+    ],
+    "image": "/work/automatic-number-plate-recognition/hero.webp"
+  },
+  {
+    "slug": "crowd-density-estimation",
+    "title": "Crowd Density Estimation",
+    "category": "Computer Vision",
+    "industry": "Computer Vision",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/crowd-density-estimation",
+    "summary": "A real-time crowd density estimation and people counting system for public safety, event management, and smart city applications.",
+    "overview": "A real-time crowd density estimation and people counting system for public safety, event management, and smart city applications.",
+    "problem": "Event organisers had no real-time crowd density data, creating dangerous overcrowding risks at venues.",
+    "problemPoints": [
+      "Event organisers had no real-time crowd density data, creating dangerous overcrowding risks at venues.",
+      "Manual headcounts became unreliable and unsafe beyond a few hundred people in complex spaces.",
+      "Traditional sensor-based monitoring required expensive fixed infrastructure impractical to deploy.",
+      "No tool existed for retrospective crowd density analysis from existing recorded event footage.",
+      "Venues faced legal liability exposure from inability to enforce and evidence safe occupancy limits."
+    ],
+    "approach": "Built a deep learning density estimation system using CNNs for accurate real-time crowd monitoring.",
+    "approachPoints": [
+      "Built a deep learning density estimation system using CNNs for accurate real-time crowd monitoring.",
+      "Implemented live heatmap visualisation overlaid on camera feeds showing density distribution in real time.",
+      "Designed the system to work with existing CCTV infrastructure without any hardware modification.",
+      "Created zone-based alerting triggering automated warnings when crowd density exceeds defined thresholds.",
+      "Added a historical analysis dashboard for post-event density trend review and safety planning."
+    ],
+    "outcome": "Provided real-time crowd monitoring with 94% counting accuracy, enabling proactive safety interventions.",
+    "metrics": [
+      {
+        "value": "Real-time",
+        "label": "crowd monitoring"
+      }
+    ],
+    "stack": [
+      "Python",
+      "OpenCV",
+      "PyTorch"
+    ],
+    "image": "/work/crowd-density-estimation/hero.webp"
+  },
+  {
+    "slug": "vehicle-detection-tracking",
+    "title": "Vehicle Detection & Tracking",
+    "category": "Computer Vision",
+    "industry": "Computer Vision",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/vehicle-detection-tracking",
+    "summary": "An end-to-end vehicle detection, tracking, and counting pipeline for traffic analysis and smart transportation infrastructure.",
+    "overview": "An end-to-end vehicle detection, tracking, and counting pipeline for traffic analysis and smart transportation infrastructure.",
+    "problem": "Traffic management relied on inaccurate manual counting and ageing sensor infrastructure.",
+    "problemPoints": [
+      "Traffic management relied on inaccurate manual counting and ageing sensor infrastructure.",
+      "Existing loop detectors and radar systems required costly installation, calibration, and ongoing maintenance.",
+      "No unified system could track individual vehicles or classify types across multiple camera zones.",
+      "Late and inaccurate data delayed emergency response routing and real-time traffic management decisions.",
+      "No method existed to generate granular, lane-level, time-stamped vehicle count data at scale."
+    ],
+    "approach": "Developed a YOLO-based detection pipeline with multi-object tracking for real-time vehicle analysis across lanes.",
+    "approachPoints": [
+      "Developed a YOLO-based detection pipeline with multi-object tracking for real-time vehicle analysis across lanes.",
+      "Implemented vehicle classification identifying cars, motorcycles, trucks, and buses with high accuracy.",
+      "Built multi-lane counting logic capable of handling complex intersections and overlapping trajectories.",
+      "Designed plug-and-play deployment using existing road camera infrastructure with no hardware changes.",
+      "Created exportable traffic density reports with time-stamped per-lane counts for traffic planning teams."
+    ],
+    "outcome": "Automated traffic data collection across multiple lanes with 96% accuracy, replacing manual counting operations.",
+    "metrics": [
+      {
+        "value": "96% accuracy",
+        "label": "vehicle detection"
+      }
+    ],
+    "stack": [
+      "Python",
+      "OpenCV",
+      "YOLO"
+    ],
+    "image": "/work/vehicle-detection-tracking/hero.webp"
+  },
+  {
+    "slug": "discord-mcp-moderator",
+    "title": "Discord MCP Moderator",
+    "category": "AI Agents",
+    "industry": "AI Agents",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/discord-mcp-moderator",
+    "summary": "A Model Context Protocol (MCP) server enabling LLMs to moderate Discord communities, scanning messages, enforcing rules, and managing channels autonomously.",
+    "overview": "A Model Context Protocol (MCP) server enabling LLMs to moderate Discord communities, scanning messages, enforcing rules, and managing channels autonomously.",
+    "problem": "Rapidly growing Discord communities required round-the-clock moderation unsustainable with volunteers alone.",
+    "problemPoints": [
+      "Rapidly growing Discord communities required round-the-clock moderation unsustainable with volunteers alone.",
+      "Toxic content and coordinated spam spread within minutes during off-hours without human oversight.",
+      "Inconsistent enforcement of community rules across moderators created user friction and appeals.",
+      "Onboarding new moderators to complex community guidelines required significant time and documentation.",
+      "No existing AI tool could safely execute real moderation actions within Discord without a human relay."
+    ],
+    "approach": "Built an MCP-based moderation agent integrating directly with Discord's API for real-time content action.",
+    "approachPoints": [
+      "Built an MCP-based moderation agent integrating directly with Discord's API for real-time content action.",
+      "Deployed LLM-powered analysis to identify toxicity, spam, coordinated harassment, and rule violations.",
+      "Designed a tiered enforcement system escalating from warn to mute to kick to ban by violation severity.",
+      "Created a full audit log of all moderation actions with LLM-generated reasoning for community transparency.",
+      "Added per-server configurable rule profiles enabling custom moderation policies without code changes."
+    ],
+    "outcome": "Automated community moderation across multiple servers, handling toxic content detection and rule enforcement autonomously.",
+    "metrics": [
+      {
+        "value": "24/7 automated",
+        "label": "moderation"
+      }
+    ],
+    "stack": [
+      "TypeScript",
+      "Node.js",
+      "OpenAI",
+      "Discord.js"
+    ],
+    "image": "/work/discord-mcp-moderator/hero.webp"
+  },
+  {
+    "slug": "stock-analysis-chatbot",
+    "title": "Stock Analysis Chatbot Assistant",
+    "category": "Data Science",
+    "industry": "Data Science",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/stock-analysis-chatbot",
+    "summary": "A GPT-powered financial analytics chatbot that provides real-time stock data, technical indicators, and investment insights through conversational AI.",
+    "overview": "A GPT-powered financial analytics chatbot that provides real-time stock data, technical indicators, and investment insights through conversational AI.",
+    "problem": "Retail investors lacked accessible technical analysis tools, requiring specialist financial knowledge to operate.",
+    "problemPoints": [
+      "Retail investors lacked accessible technical analysis tools, requiring specialist financial knowledge to operate.",
+      "Market data was fragmented across exchanges, platforms, and paywalled services with no unified view.",
+      "Computing indicators like RSI, MACD, and Bollinger Bands required expensive proprietary trading software.",
+      "Data interpretation demanded domain expertise most retail investors did not possess or have time to develop.",
+      "No conversational interface existed for querying live stock data through natural language."
+    ],
+    "approach": "Built a conversational AI assistant integrating the Yahoo Finance API for real-time market data retrieval.",
+    "approachPoints": [
+      "Built a conversational AI assistant integrating the Yahoo Finance API for real-time market data retrieval.",
+      "Automated computation of SMA, EMA, RSI, MACD, and Bollinger Bands triggered on request through chat.",
+      "Designed a natural language interface accepting queries like 'Is NVDA overbought?' for intuitive use.",
+      "Integrated interactive Plotly charts rendered inline within the chat for immediate visual data exploration.",
+      "Leveraged GPT to generate contextual investment commentary alongside quantitative indicator analysis."
+    ],
+    "outcome": "Democratized financial analysis for non-expert users, processing real-time market data through natural language queries.",
+    "metrics": [
+      {
+        "value": "Real-time",
+        "label": "market analysis"
+      }
+    ],
+    "stack": [
+      "Python",
+      "Streamlit",
+      "Pandas"
+    ],
+    "image": "/work/stock-analysis-chatbot/hero.webp"
+  },
+  {
+    "slug": "tripgenie-ai-travel-agent",
+    "title": "TripGenie AI Travel Agent",
+    "category": "AI Agents",
+    "industry": "AI Agents",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/tripgenie-ai-travel-agent",
+    "summary": "A multi-agent AI travel assistant that generates personalized trip plans with accommodation, budget planning, local experiences, and transportation details.",
+    "overview": "A multi-agent AI travel assistant that generates personalized trip plans with accommodation, budget planning, local experiences, and transportation details.",
+    "problem": "Trip planning required hours of research scattered across booking sites, blogs, and travel apps.",
+    "problemPoints": [
+      "Trip planning required hours of research scattered across booking sites, blogs, and travel apps.",
+      "Generic AI itinerary tools ignored personal preferences, budget limits, and local cultural nuances.",
+      "No single platform combined accommodation, transportation, budget, and curated local experience planning.",
+      "Travellers frequently encountered tourist traps due to lack of genuine local insight from AI tools.",
+      "Group travel coordination across multiple preferences amplified research complexity exponentially."
+    ],
+    "approach": "Developed a multi-agent CrewAI system with specialised Location, Guide, and Planner agent roles.",
+    "approachPoints": [
+      "Developed a multi-agent CrewAI system with specialised Location, Guide, and Planner agent roles.",
+      "Implemented an orchestrator agent that synthesises all specialist outputs into a cohesive itinerary.",
+      "Integrated real-time DuckDuckGo search to ensure accommodation and transport recommendations stay current.",
+      "Built budget-aware planning logic that constrains all suggestions to user-defined spending limits.",
+      "Added authentic local experience curation sourcing off-the-beaten-path recommendations from live web data."
+    ],
+    "outcome": "Generated complete personalized travel itineraries in seconds, replacing hours of manual research across multiple platforms.",
+    "metrics": [
+      {
+        "value": "Seconds",
+        "label": "to complete itinerary"
+      }
+    ],
+    "stack": [
+      "Python",
+      "Streamlit",
+      "Gemini",
+      "Ollama",
+      "CrewAI"
+    ],
+    "image": "/work/tripgenie-ai-travel-agent/hero.webp"
+  },
+  {
+    "slug": "hospital-readmission-prediction",
+    "title": "Hospital Readmission Prediction",
+    "category": "Machine Learning",
+    "industry": "Machine Learning",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/hospital-readmission-prediction",
+    "summary": "A predictive analytics system using machine learning to identify patients at high risk of hospital readmission, enabling proactive intervention.",
+    "overview": "A predictive analytics system using machine learning to identify patients at high risk of hospital readmission, enabling proactive intervention.",
+    "problem": "Hospitals faced rising 30-day readmission rates triggering CMS financial penalties and reduced reimbursements.",
+    "problemPoints": [
+      "Hospitals faced rising 30-day readmission rates triggering CMS financial penalties and reduced reimbursements.",
+      "Clinicians had no validated, quantitative risk scoring tool to identify high-risk patients at discharge.",
+      "Severe class imbalance in patient data caused standard models to under-detect the high-risk minority class.",
+      "Manual risk assessment was subjective, slow, and highly inconsistent across clinical care teams.",
+      "No automated pipeline integrated clinical notes, lab values, and admission history into a unified risk score."
+    ],
+    "approach": "Built a comprehensive ML pipeline with SMOTE oversampling to correct critical class imbalance in readmission data.",
+    "approachPoints": [
+      "Built a comprehensive ML pipeline with SMOTE oversampling to correct critical class imbalance in readmission data.",
+      "Performed extensive feature engineering on clinical variables, lab results, and length-of-stay metrics.",
+      "Selected CatBoost as the primary model for its exceptional performance with clinical categorical variables.",
+      "Applied Optuna hyperparameter optimisation maximising recall to ensure high-risk patients are never missed.",
+      "Delivered probability-scored risk outputs to assist clinical discharge planning and post-care interventions."
+    ],
+    "outcome": "Identified high-risk patients with strong predictive accuracy, enabling targeted post-discharge care programs.",
+    "metrics": [
+      {
+        "value": "Predictive",
+        "label": "risk assessment"
+      }
+    ],
+    "stack": [
+      "Python",
+      "Optuna",
+      "Pandas",
+      "Scikit-learn"
+    ],
+    "image": "/work/hospital-readmission-prediction/hero.webp"
+  },
+  {
+    "slug": "intrusion-detection-system",
+    "title": "Intrusion Detection in WSN",
+    "category": "Machine Learning",
+    "industry": "Machine Learning",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/intrusion-detection-system",
+    "summary": "A machine learning-based intrusion detection system for wireless sensor networks, classifying attack types including Blackhole, Grayhole, Flooding, and TDMA attacks.",
+    "overview": "A machine learning-based intrusion detection system for wireless sensor networks, classifying attack types including Blackhole, Grayhole, Flooding, and TDMA attacks.",
+    "problem": "Wireless sensor networks were exposed to stealthy multi-vector attacks evading rule-based detection systems.",
+    "problemPoints": [
+      "Wireless sensor networks were exposed to stealthy multi-vector attacks evading rule-based detection systems.",
+      "Attack patterns varied drastically across Blackhole, Grayhole, Flooding, and TDMA attack categories.",
+      "High-dimensional sensor telemetry made manual threat identification computationally infeasible at scale.",
+      "Imbalanced datasets caused classifiers to chronically under-detect rare but operationally critical attacks.",
+      "Deployment on resource-constrained sensor nodes required lightweight models without sacrificing accuracy."
+    ],
+    "approach": "Implemented a full ML pipeline from data preprocessing through model selection and optimisation.",
+    "approachPoints": [
+      "Implemented a full ML pipeline from data preprocessing through model selection and optimisation.",
+      "Applied ANOVA-F and Recursive Feature Elimination to identify the most discriminative sensor features.",
+      "Used SMOTE to balance minority attack class distributions before classifier training.",
+      "Evaluated and systematically compared multiple classifiers, selecting the optimal model per attack type.",
+      "Optimised the final model for deployment on resource-constrained wireless sensor network hardware."
+    ],
+    "outcome": "Achieved high-accuracy attack classification, enabling automated threat response in wireless sensor deployments.",
+    "metrics": [
+      {
+        "value": "High accuracy",
+        "label": "attack classification"
+      }
+    ],
+    "stack": [
+      "Python",
+      "Scikit-learn",
+      "Pandas"
+    ],
+    "image": "/work/intrusion-detection-system/hero.webp"
+  },
+  {
+    "slug": "multiple-sentiment-analysis",
+    "title": "Real-Time Sentiment Analysis",
+    "category": "NLP",
+    "industry": "NLP",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/multiple-sentiment-analysis",
+    "summary": "A real-time sentiment analysis platform capable of classifying text across multiple sentiment dimensions simultaneously.",
+    "overview": "A real-time sentiment analysis platform capable of classifying text across multiple sentiment dimensions simultaneously.",
+    "problem": "Binary positive/negative sentiment tools were too coarse to capture the emotional nuance brands needed.",
+    "problemPoints": [
+      "Binary positive/negative sentiment tools were too coarse to capture the emotional nuance brands needed.",
+      "Existing platforms could not classify text across multiple emotional dimensions simultaneously.",
+      "Standard models failed on short informal text such as tweets, reviews, and customer feedback messages.",
+      "No real-time pipeline processed multi-label sentiment at the speed required for live brand monitoring.",
+      "Single-label classifiers could not accurately handle complex mixed-emotion content common in online discourse."
+    ],
+    "approach": "Built a multi-label sentiment classifier covering multiple emotional dimensions with independent scoring.",
+    "approachPoints": [
+      "Built a multi-label sentiment classifier covering multiple emotional dimensions with independent scoring.",
+      "Implemented a robust text preprocessing pipeline handling informal language, abbreviations, and HTML entities.",
+      "Trained ensemble classifiers to independently predict confidence scores across each emotional dimension.",
+      "Created a real-time inference API capable of streaming text classification at production-grade throughput.",
+      "Designed an analytics dashboard visualising multi-dimensional sentiment distributions for brand monitoring teams."
+    ],
+    "outcome": "Enabled granular brand sentiment monitoring with multi-dimensional emotional analysis.",
+    "metrics": [
+      {
+        "value": "Multi-label",
+        "label": "sentiment classification"
+      }
+    ],
+    "stack": [
+      "Python",
+      "Scikit-learn"
+    ],
+    "image": "/work/multiple-sentiment-analysis/hero.webp"
+  },
+  {
+    "slug": "trustecg",
+    "title": "TrustECG",
+    "category": "Machine Learning",
+    "industry": "Machine Learning",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/trustecg",
+    "summary": "An AI-powered ECG analysis platform providing automated cardiac rhythm classification and anomaly detection from electrocardiogram data.",
+    "overview": "An AI-powered ECG analysis platform providing automated cardiac rhythm classification and anomaly detection from electrocardiogram data.",
+    "problem": "Specialist cardiologists were the only qualified reviewers of ECG data, creating severe screening bottlenecks.",
+    "problemPoints": [
+      "Specialist cardiologists were the only qualified reviewers of ECG data, creating severe screening bottlenecks.",
+      "Rural and resource-limited healthcare settings lacked access to cardiologists for routine cardiac screening.",
+      "Manual ECG reading averaged 10–20 minutes per patient, creating unsustainable workloads at scale.",
+      "Subtle arrhythmia patterns were frequently missed under high consultation volumes and clinician fatigue.",
+      "High cardiac screening costs prevented population-level preventive cardiology programmes from scaling."
+    ],
+    "approach": "Developed a deep learning model combining PyTorch and TensorFlow for automated ECG classification.",
+    "approachPoints": [
+      "Developed a deep learning model combining PyTorch and TensorFlow for automated ECG classification.",
+      "Trained on large-scale annotated ECG datasets covering normal sinus rhythms and multiple arrhythmia variants.",
+      "Built an ECG signal preprocessing pipeline for noise denoising, baseline correction, and feature normalisation.",
+      "Implemented confidence scoring to automatically flag borderline cases for specialist cardiologist review.",
+      "Designed a clinical-grade inference pipeline producing structured classification reports per ECG reading."
+    ],
+    "outcome": "Automated ECG screening, enabling faster cardiac risk assessment for large patient populations.",
+    "metrics": [
+      {
+        "value": "Automated",
+        "label": "cardiac screening"
+      }
+    ],
+    "stack": [
+      "Python",
+      "TensorFlow",
+      "PyTorch"
+    ],
+    "image": "/work/trustecg/hero.webp"
+  },
+  {
+    "slug": "applicant-tracking-system",
+    "title": "Applicant Tracking System",
+    "category": "Full-Stack",
+    "industry": "Full-Stack",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/applicant-tracking-system",
+    "summary": "An AI-enhanced applicant tracking platform that automates resume screening, candidate ranking, and recruitment pipeline management.",
+    "overview": "An AI-enhanced applicant tracking platform that automates resume screening, candidate ranking, and recruitment pipeline management.",
+    "problem": "HR teams spent days manually reviewing hundreds of resumes per open role before shortlisting began.",
+    "problemPoints": [
+      "HR teams spent days manually reviewing hundreds of resumes per open role before shortlisting began.",
+      "Inconsistent evaluation criteria across reviewers caused qualified candidates to be overlooked unfairly.",
+      "No automated system ranked candidates against specific job description requirements at scale.",
+      "Peak hiring periods generated application volumes that overwhelmed recruitment capacity entirely.",
+      "Manual data entry from resumes into HR systems introduced transcription errors and process delays."
+    ],
+    "approach": "Built an intelligent ATS using NLP to parse and extract structured data from resumes automatically.",
+    "approachPoints": [
+      "Built an intelligent ATS using NLP to parse and extract structured data from resumes automatically.",
+      "Implemented a semantic matching engine scoring candidate profiles against job description requirements.",
+      "Designed a ranked candidate leaderboard with transparent scoring breakdowns for fair HR evaluation.",
+      "Automated pipeline stage progression based on configurable score thresholds to reduce manual decisions.",
+      "Created Gemini-powered, role-specific interview question generation customised per candidate profile."
+    ],
+    "outcome": "Reduced initial screening time by 75% while improving candidate-role matching accuracy.",
+    "metrics": [
+      {
+        "value": "75% faster",
+        "label": "screening time"
+      }
+    ],
+    "stack": [
+      "Python",
+      "Streamlit",
+      "Gemini"
+    ],
+    "image": "/work/applicant-tracking-system/hero.webp"
+  },
+  {
+    "slug": "automations-n8n",
+    "title": "Workflow Automations (n8n)",
+    "category": "Automation",
+    "industry": "Automation",
+    "source": "JitterStack",
+    "sourceUrl": "https://jitterstack.com/case-studies/automations-n8n",
+    "summary": "A suite of production-grade workflow automations built on n8n, from RAG chatbot pipelines to social media posting and restaurant booking systems.",
+    "overview": "A suite of production-grade workflow automations built on n8n, from RAG chatbot pipelines to social media posting and restaurant booking systems.",
+    "problem": "Teams spent 20+ hours weekly on repetitive manual workflows including content scheduling and data handling.",
+    "problemPoints": [
+      "Teams spent 20+ hours weekly on repetitive manual workflows including content scheduling and data handling.",
+      "Social media posting required daily manual intervention with no scheduling or automated publishing capability.",
+      "Restaurant booking management relied entirely on staff availability, creating gaps in customer handling.",
+      "RAG chatbot deployment required complex infrastructure setup, blocking access for non-technical teams.",
+      "No unified automation layer connected the organisation's disparate SaaS tools without custom backend code."
+    ],
+    "approach": "Designed and deployed a RAG chatbot integration workflow on n8n for autonomous knowledge-base Q&A handling.",
+    "approachPoints": [
+      "Designed and deployed a RAG chatbot integration workflow on n8n for autonomous knowledge-base Q&A handling.",
+      "Built a LinkedIn and Twitter auto-posting pipeline triggering scheduled content publication without human input.",
+      "Created a restaurant booking management automation handling reservation intake and confirmation end-to-end.",
+      "Implemented webhook-driven architectures enabling API connections across external services without custom code.",
+      "Delivered all workflows with monitoring nodes and error-handling logic for reliable 24/7 autonomous operation."
+    ],
+    "outcome": "Eliminated 20+ hours of weekly manual work across four distinct workflow categories.",
+    "metrics": [
+      {
+        "value": "20+ hours saved",
+        "label": "weekly automation"
+      }
+    ],
+    "stack": [
+      "n8n",
+      "OpenAI"
+    ],
+    "image": "/work/automations-n8n/hero.webp"
+  }
+]

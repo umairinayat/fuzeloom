@@ -1,11 +1,7 @@
-# Brand placeholders (TEMPORARY)
+# FuzeLoom wordmark
 
-These SVG logos are temporary placeholders for development only — an original
-F built from interlocking strands, one in amber (#F2A33A).
+- `logo-dark.svg`: navy and cobalt wordmark for light backgrounds.
+- `logo-light.svg`: white and pale blue wordmark for dark backgrounds.
+- `app/icon.svg`: typographic F favicon.
 
-- `logo-dark.svg` — dark-on-light (nav on linen)
-- `logo-light.svg` — light-on-dark (footer on indigo)
-- `mark.svg` — mark only (favicon source)
-
-Replace with final designer files before launch. Keep the textile idea:
-indigo strands + one amber thread, flat, readable at 16px.
+The site header and footer render the wordmark as text using the site display font.

@@ -18,7 +18,7 @@ export default function ContactPage() {
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr]">
           <div>
             <Eyebrow>Contact</Eyebrow>
-            <h1 className="h-1 mt-4 text-indigo">
+            <h1 className="heading-1 mt-4 text-indigo">
               Have a system that should work smarter?
             </h1>
             <p className="mt-4 max-w-[52ch] text-[17px]">
@@ -41,11 +41,6 @@ export default function ContactPage() {
               >
                 {site.email}
               </a>
-              <p className="mt-3 text-slate">
-                {site.location}
-                <br />
-                {site.workingHours}
-              </p>
             </div>
           </div>
           <div className="rounded-[12px] border border-line bg-white p-6 sm:p-8">
@@ -55,7 +50,7 @@ export default function ContactPage() {
       </Section>
       <Section className="border-t border-line bg-white/40">
         <Eyebrow>Before you write</Eyebrow>
-        <h2 className="h-2 mt-4 text-indigo">Common questions</h2>
+        <h2 className="heading-2 mt-4 text-indigo">Common questions</h2>
         <div className="mt-6 max-w-[80ch]">
           <FaqList />
         </div>

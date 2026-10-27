@@ -1,17 +1,30 @@
+import cases from "./work-data.json";
+
 export type CaseStudy = {
   slug: string;
   title: string;
-  client: string;
+  category: string;
   industry: string;
+  source: string;
+  sourceUrl: string;
+  summary: string;
+  overview: string;
   problem: string;
+  problemPoints?: string[];
   approach: string;
-  stack: string[];
+  approachPoints?: string[];
   outcome: string;
-  year: string;
-  isInternalProject: boolean;
+  metrics: { value: string; label: string }[];
+  stack: string[];
+  image: string;
+  client?: string;
+  timeline?: string;
+  modules?: {
+    title: string;
+    description: string;
+    bullets: string[];
+    images: string[];
+  }[];
 };
 
-// TODO: add only real, verifiable projects. Internal/demo builds must keep
-// isInternalProject: true so the UI labels them honestly.
-// Empty on purpose — the site shows an honest empty state until filled.
-export const work: CaseStudy[] = [];
+export const work: CaseStudy[] = cases;

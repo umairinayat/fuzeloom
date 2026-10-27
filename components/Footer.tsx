@@ -7,15 +7,15 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="bg-indigo text-linen">
-      <div className="mx-auto w-full max-w-[1200px] px-5 py-14 sm:px-8">
+      <div className="mx-auto w-full max-w-[1280px] px-5 py-16 sm:px-8 lg:px-12">
         <div className="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>
             <LogoLockup variant="light" />
             <p className="mt-4 max-w-[36ch] text-[15px] leading-relaxed text-linen/80">
               {site.positioning}
             </p>
-            <p className="mt-4 font-mono text-[13px] tracking-wide text-amber">
-              AI · SOFTWARE · INTEGRATION
+            <p className="mt-4 text-[13px] font-semibold text-blue-soft">
+              AI. Software. Connected.
             </p>
           </div>
           <nav aria-label="Footer">
@@ -65,11 +65,6 @@ export function Footer() {
             >
               {site.email}
             </a>
-            <p className="mt-3 text-[14px] text-linen/70">
-              {site.location}
-              <br />
-              {site.workingHours}
-            </p>
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-3 border-t border-white/15 pt-6 text-[14px] text-linen/70 sm:flex-row sm:items-center sm:justify-between">

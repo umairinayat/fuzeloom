@@ -7,8 +7,7 @@ export const site = {
     "FuzeLoom connects AI, automation, and software into the systems your business already runs, so new technology works with your team instead of beside it.",
   description:
     "FuzeLoom connects AI, automation, and software into the systems your business already runs — CRM, ERP, databases, and internal tools.",
-  // TODO: confirm real inbox. Placeholder uses hello@fuzeloom.tech.
-  email: "hello@fuzeloom.tech",
+  email: "contact@fuzeloom.tech",
   // TODO: fill location, timezone, working hours.
   location: "TODO: location + time zone",
   workingHours: "TODO: working hours + client overlap",

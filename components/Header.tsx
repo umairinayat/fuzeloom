@@ -61,32 +61,32 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-linen/95 backdrop-blur">
-      <div className="mx-auto flex h-[68px] w-full max-w-[1200px] items-center justify-between px-5 sm:px-8">
-        <Link href="/" aria-label="FuzeLoom home">
+    <header className="sticky top-0 z-50 bg-linen/95 backdrop-blur">
+      <div className="mx-auto grid h-[76px] w-full max-w-[1280px] grid-cols-[1fr_auto] items-center px-5 sm:px-8 lg:grid-cols-[1fr_auto_1fr] lg:px-12">
+        <Link href="/" aria-label="FuzeLoom home" className="justify-self-start">
           <LogoLockup variant="dark" />
         </Link>
-        <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-1 rounded-full border border-line bg-white p-1.5 shadow-sm lg:flex">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="text-[15px] font-medium text-ink hover:text-indigo"
+              className="rounded-full px-4 py-2 text-[13px] font-medium text-slate transition-colors hover:bg-blue-pale hover:text-indigo"
             >
               {l.label}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            className="rounded-[8px] bg-indigo px-5 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-indigo-dark"
-          >
-            Start a conversation
-          </Link>
         </nav>
+        <Link
+          href="/contact"
+          className="hidden justify-self-end rounded-full bg-blue px-6 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#2457d6] lg:inline-flex"
+        >
+          Let&apos;s collaborate <span aria-hidden="true">↗</span>
+        </Link>
         <button
           ref={buttonRef}
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-[8px] border border-line text-ink lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center justify-self-end rounded-full border border-line bg-white text-ink lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -117,7 +117,7 @@ export function Header() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-4 rounded-[8px] bg-amber px-5 py-3 text-center text-[16px] font-semibold text-ink hover:bg-amber-dark"
+              className="mt-4 rounded-full bg-blue px-5 py-3 text-center text-[16px] font-semibold text-white hover:bg-[#2457d6]"
             >
               Start a conversation
             </Link>

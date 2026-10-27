@@ -10,7 +10,7 @@ export function Container({
   className?: string;
 }) {
   return (
-    <div className={clsx("mx-auto w-full max-w-[1200px] px-5 sm:px-8", className)}>
+    <div className={clsx("mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-12", className)}>
       {children}
     </div>
   );
@@ -26,8 +26,8 @@ export function Eyebrow({
   return (
     <p
       className={clsx(
-        "font-mono text-[12px] font-medium uppercase tracking-[0.18em]",
-        tone === "dark" ? "text-amber" : "text-indigo"
+        "text-[13px] font-semibold tracking-[0.02em]",
+        tone === "dark" ? "text-blue-soft" : "text-blue"
       )}
     >
       {children}
@@ -45,7 +45,7 @@ export function Section({
   id?: string;
 }) {
   return (
-    <section id={id} className={clsx("py-16 sm:py-24 lg:py-28", className)}>
+    <section id={id} className={clsx("py-20 sm:py-28 lg:py-32", className)}>
       <Container>{children}</Container>
     </section>
   );
@@ -63,9 +63,9 @@ export function Button({
   className?: string;
 }) {
   const base =
-    "inline-flex items-center justify-center rounded-[8px] px-6 py-3 text-[16px] font-semibold transition-colors duration-200";
+    "inline-flex min-h-12 items-center justify-center gap-3 rounded-full px-7 py-3 text-[15px] font-semibold transition-colors duration-200";
   const styles = {
-    primary: "bg-amber text-ink hover:bg-amber-dark",
+    primary: "bg-blue text-white hover:bg-[#2457d6]",
     secondary: "bg-indigo text-white hover:bg-indigo-dark",
     "outline-light":
       "border border-linen/40 text-linen hover:border-linen hover:bg-white/10",
@@ -89,7 +89,7 @@ export function Card({
   return (
     <div
       className={clsx(
-        "rounded-[12px] border border-line bg-white p-6 transition-colors duration-200 sm:p-7",
+        "rounded-[20px] border border-line bg-white p-6 transition-colors duration-200 sm:p-7",
         className
       )}
     >

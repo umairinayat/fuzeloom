@@ -1,13 +1,15 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Button, Card, Container, Eyebrow, Section } from "@/components/ui";
-import { ThreadDiagram, ServiceIcon } from "@/components/graphics";
+import { Button, Container, Section } from "@/components/ui";
 import { FaqList } from "@/components/Faq";
-import { services } from "@/content/services";
+import { ToolMarquee } from "@/components/ToolMarquee";
+import { IndustryIcon, ServiceScene } from "@/components/graphics";
+import { industries } from "@/content/industries";
 import { process } from "@/content/process";
-import { industries, industriesPlaceholderNote } from "@/content/industries";
-import { work } from "@/content/work";
+import { services } from "@/content/services";
 import { site } from "@/content/site";
+import { work } from "@/content/work";
 
 export const metadata: Metadata = {
   title: "FuzeLoom Technologies — AI, woven into how you work",
@@ -25,322 +27,185 @@ const jsonLd = {
   email: site.email,
 };
 
+const featured = work.filter((project) =>
+  ["answerly", "sehat-guftagu", "legaledge"].includes(project.slug)
+);
+
+const tools = [
+  { name: "Python", logo: "/brand/tools/python.svg" },
+  { name: "PyTorch", logo: "/brand/tools/pytorch.svg" },
+  { name: "TensorFlow", logo: "/brand/tools/tensorflow.svg" },
+  { name: "scikit-learn", logo: "/brand/tools/scikit-learn.svg" },
+  { name: "OpenCV", logo: "/brand/tools/opencv.svg" },
+  { name: "YOLOv8", logo: "/brand/tools/yolov8.svg" },
+  { name: "BoT-SORT", logo: "/brand/tools/bot-sort.svg" },
+  { name: "Optuna", logo: "/brand/tools/optuna.svg" },
+  { name: "Pandas", logo: "/brand/tools/pandas.svg" },
+  { name: "LangChain", logo: "/brand/tools/langchain.svg" },
+  { name: "LangGraph", logo: "/brand/tools/langgraph.svg" },
+  { name: "CrewAI", logo: "/brand/tools/crewai.svg" },
+  { name: "OpenAI", logo: "/brand/tools/openai.svg" },
+  { name: "GPT-4", logo: "/brand/tools/openai.svg" },
+  { name: "Gemini", logo: "/brand/tools/gemini.svg" },
+  { name: "Groq", logo: "/brand/tools/groq.svg" },
+  { name: "Ollama", logo: "/brand/tools/ollama.svg" },
+  { name: "Hugging Face", logo: "/brand/tools/hugging-face.svg" },
+  { name: "FAISS", logo: "/brand/tools/faiss.svg" },
+  { name: "Pinecone", logo: "/brand/tools/pinecone.svg" },
+  { name: "ChromaDB", logo: "/brand/tools/chromadb.svg" },
+  { name: "Qdrant", logo: "/brand/tools/qdrant.svg" },
+  { name: "Streamlit", logo: "/brand/tools/streamlit.svg" },
+  { name: "Gradio", logo: "/brand/tools/gradio.svg" },
+  { name: "ElevenLabs", logo: "/brand/tools/elevenlabs.svg" },
+  { name: "Vapi.ai", logo: "/brand/tools/vapi.svg" },
+  { name: "AWS Textract", logo: "/brand/tools/aws-textract.svg" },
+];
+
+const testimonials = [
+  {
+    quote: "MediBot AI drastically reduces hallucination risks and empowers our doctors to make faster, evidence-based decisions.",
+    name: "MediBot AI Team",
+    context: "Healthcare AI",
+  },
+  {
+    quote: "This solution demonstrates the power of combining AI, automation, and integrations to streamline business operations.",
+    name: "Smart Business Automation",
+    context: "Customer support AI",
+  },
+];
+
 export default function Home() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      {/* 1. Hero */}
-      <div className="relative overflow-hidden bg-indigo text-linen">
-        <div
-          aria-hidden="true"
-          className="woven-grid-dark pointer-events-none absolute inset-0"
-        />
-        <Container className="relative grid gap-12 py-16 sm:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-28">
-          <div>
-            <Eyebrow tone="dark">AI · Software · Integration</Eyebrow>
-            <h1 className="h-display mt-5 text-linen">
-              AI, woven into how you work.
-            </h1>
-            <p className="mt-5 max-w-[52ch] text-[17px] leading-relaxed text-linen/85 sm:text-[18px]">
-              {site.positioning}
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button href="/contact" variant="primary">
-                Start a conversation
-              </Button>
-              <Button href="/services" variant="outline-light">
-                See what we build
-              </Button>
-            </div>
-            <dl className="mt-8 grid max-w-[52ch] grid-cols-1 gap-3 sm:grid-cols-3">
-              {[
-                ["No fake counters", "No invented clients"],
-                ["Docs + handover", "Your team can run it"],
-                ["Audit first", "Map before build"],
-              ].map(([t, d]) => (
-                <div
-                  key={t}
-                  className="rounded-[8px] border border-white/15 px-3 py-2.5"
-                >
-                  <dt className="text-[13px] font-semibold text-amber">{t}</dt>
-                  <dd className="mt-0.5 text-[13px] text-linen/70">{d}</dd>
-                </div>
-              ))}
-            </dl>
+      <section className="hero-glow relative overflow-hidden bg-linen">
+        <Container className="relative flex flex-col items-center pb-20 pt-28 text-center sm:pb-28 sm:pt-36 lg:pt-40">
+          <p className="rounded-full border border-blue/15 bg-white/80 px-4 py-2 text-sm font-medium text-blue shadow-sm">
+            AI engineering & software integration
+          </p>
+          <h1 className="h-display mt-8 max-w-[15ch] text-indigo">
+            Make your systems <span className="block font-serif font-normal italic tracking-[-0.06em] text-blue">work together.</span>
+          </h1>
+          <p className="mt-7 max-w-[60ch] text-lg leading-relaxed text-slate">
+            We build AI, automation, and software that fit the tools your team already uses, from the first workflow map to a working system.
+          </p>
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+            <Button href="/contact">Let&apos;s build together <span aria-hidden="true">↗</span></Button>
+            <Link href="/work" className="text-link inline-flex px-3 py-3">Explore our work <span aria-hidden="true">↗</span></Link>
           </div>
-          <div className="rise">
-            <ThreadDiagram />
-          </div>
+          <p className="mt-10 text-sm text-slate">{work.length} published project stories across AI, software, and automation</p>
         </Container>
+      </section>
+
+      <div className="border-y border-line bg-white py-8">
+        <Container>
+          <p className="text-center text-sm text-slate">Tools used across our published projects</p>
+        </Container>
+        <ToolMarquee tools={tools} />
       </div>
 
-      {/* 2. Problem */}
-      <Section>
-        <div className="max-w-[72ch]">
-          <Eyebrow>The problem we solve</Eyebrow>
-          <h2 className="h-1 mt-4 text-indigo">
-            Most businesses don&apos;t need another tool.
-          </h2>
-          <p className="mt-4 text-[17px] leading-relaxed">
-            Teams already pay for software that holds their work. New AI fails
-            when it sits beside those systems instead of inside them.
-          </p>
-          <ul className="mt-8 grid gap-4 sm:grid-cols-3">
-            {[
-              {
-                t: "Disconnected pilots",
-                d: "Demos that never touch your real data or daily workflow.",
-              },
-              {
-                t: "Copy-paste work",
-                d: "Staff bridging the gap between systems by hand.",
-              },
-              {
-                t: "Unmaintainable builds",
-                d: "No docs, no handover, no one sure how it runs.",
-              },
-            ].map((x) => (
-              <Card key={x.t}>
-                <h3 className="h-3 text-ink">{x.t}</h3>
-                <p className="mt-2 text-[15px] text-slate">{x.d}</p>
-              </Card>
-            ))}
-          </ul>
+      <Section className="bg-linen">
+        <div className="text-center">
+          <h2 className="heading-1 text-indigo">Services</h2>
+          <p className="mx-auto mt-4 max-w-[58ch] text-slate">Four disciplines, connected around the work your business needs to do.</p>
         </div>
-      </Section>
-
-      {/* 3. Services */}
-      <Section className="border-t border-line bg-white/40">
-        <Eyebrow>Services</Eyebrow>
-        <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
-          <h2 className="h-1 text-indigo">Four threads, one fabric</h2>
-          <Link
-            href="/services"
-            className="text-[15px] font-semibold text-indigo underline-offset-4 hover:underline"
-          >
-            All services →
-          </Link>
-        </div>
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((s) => (
-            <Card
-              key={s.slug}
-              className="flex flex-col transition-transform duration-200 hover:-translate-y-1"
-            >
-              <span className="text-indigo" aria-hidden="true">
-                <ServiceIcon slug={s.slug} />
-              </span>
-              <h3 className="h-3 mt-4">{s.title}</h3>
-              <p className="mt-2 flex-1 text-[15px] text-slate">{s.short}</p>
-              <Link
-                href={`/services#${s.slug}`}
-                className="mt-4 text-[15px] font-semibold text-indigo"
-              >
-                What&apos;s included →
-              </Link>
-            </Card>
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+          {services.map((service) => (
+            <Link key={service.slug} href={`/services#${service.slug}`} className="group flex flex-col overflow-hidden rounded-[18px] border border-line bg-white transition-[border-color,box-shadow] duration-200 hover:border-blue/30 hover:shadow-lg hover:shadow-indigo/8">
+              <div className="h-40 overflow-hidden border-b border-line bg-blue-pale/45 text-blue">
+                <ServiceScene slug={service.slug} />
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="font-display text-xl font-semibold tracking-[-0.03em] text-indigo">{service.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate">{service.short}</p>
+                <span className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-blue">Explore service <span className="transition-transform group-hover:translate-x-1" aria-hidden="true">↗</span></span>
+              </div>
+            </Link>
           ))}
         </div>
       </Section>
 
-      {/* 4. How we work */}
-      <Section>
-        <Eyebrow>How we work</Eyebrow>
-        <h2 className="h-1 mt-4 text-indigo">
-          Start from your systems, not a blank page
-        </h2>
-        <ol className="mt-10 grid gap-0 lg:grid-cols-5">
-          {process.map((step, i) => (
-            <li
-              key={step.name}
-              className="relative border-l-2 border-amber/70 py-2 pl-6 lg:border-l-0 lg:border-t-2 lg:py-0 lg:pl-0 lg:pr-6 lg:pt-6"
-            >
-              <span
-                aria-hidden="true"
-                className="absolute -left-[9px] top-3 h-4 w-4 rounded-full border-2 border-amber bg-linen lg:-top-[9px] lg:left-0 lg:top-auto"
-              />
-              <p className="font-mono text-[12px] uppercase tracking-[0.16em] text-slate">
-                Step {i + 1}
-              </p>
-              <h3 className="h-3 mt-1 text-indigo">{step.name}</h3>
-              <p className="mt-2 text-[15px] leading-relaxed text-slate">
-                {step.text}
-              </p>
-              <p className="mt-2 font-mono text-[12px] tracking-wide text-indigo/80">
-                {step.delivers}
-              </p>
+      <Section className="border-y border-line bg-white">
+        <div className="text-center">
+          <h2 className="heading-1 text-indigo">Industries we serve</h2>
+          <p className="mx-auto mt-4 max-w-[58ch] text-slate">Real projects across different sectors, each shaped around the people and systems involved.</p>
+        </div>
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {industries.map((industry) => (
+            <Link key={industry.slug} href={`/industries#${industry.slug}`} className="group flex min-h-28 items-center gap-4 rounded-[16px] border border-line bg-linen p-5 transition-[background-color,border-color,box-shadow] hover:border-blue/30 hover:bg-white hover:shadow-md hover:shadow-indigo/5">
+              <span className="grid size-14 shrink-0 place-items-center rounded-2xl border border-blue/10 bg-white text-blue shadow-sm" aria-hidden="true"><IndustryIcon slug={industry.slug} /></span>
+              <span className="min-w-0 flex-1 font-display text-base font-semibold text-indigo">{industry.name}</span>
+              <span className="text-lg text-blue transition-transform group-hover:translate-x-0.5" aria-hidden="true">↗</span>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-8 text-center"><Link href="/industries" className="text-link inline-flex">Explore industries <span aria-hidden="true">↗</span></Link></div>
+      </Section>
+
+      <Section className="bg-linen">
+        <h2 className="heading-1 text-center text-indigo">How we work</h2>
+        <ol className="mt-14 grid gap-8 border-t border-line pt-9 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
+          {process.map((step, index) => (
+            <li key={step.name}>
+              <span className="font-display text-4xl font-semibold tracking-[-0.05em] text-blue">0{index + 1}</span>
+              <h3 className="mt-5 font-display text-lg font-semibold text-indigo">{step.name}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate">{step.text}</p>
             </li>
           ))}
         </ol>
       </Section>
 
-      {/* 5. Industries */}
-      <Section className="border-t border-line bg-white/40">
-        <Eyebrow>Industries</Eyebrow>
-        <h2 className="h-1 mt-4 text-indigo">Focused, not generic</h2>
-        {industries.length === 0 ? (
-          <div className="mt-6 max-w-[68ch] rounded-[12px] border border-dashed border-slate/40 bg-linen p-6">
-            <p className="text-[16px] font-medium text-ink">
-              [Placeholder] Focus industries to be confirmed
-            </p>
-            <p className="mt-2 text-[15px] text-slate">
-              {industriesPlaceholderNote}
-            </p>
-            <Link
-              href="/industries"
-              className="mt-4 inline-block text-[15px] font-semibold text-indigo"
-            >
-              How we choose focus →
+      <Section className="border-y border-line bg-white">
+        <h2 className="heading-1 text-center text-indigo">Case studies</h2>
+        <p className="mx-auto mt-4 max-w-[60ch] text-center text-slate">A closer look at the problems, systems, and outcomes behind our work.</p>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {featured.map((project) => (
+            <Link key={project.slug} href={`/work/${project.slug}`} className="group overflow-hidden rounded-[18px] border border-line bg-linen transition-shadow hover:shadow-xl hover:shadow-indigo/10">
+              <div className="relative aspect-[16/10] overflow-hidden bg-blue-pale">
+                <Image src={project.image} alt={`${project.title} project preview`} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-300 group-hover:scale-[1.03]" />
+              </div>
+              <div className="p-6">
+                <p className="text-xs font-semibold text-blue">{project.category}</p>
+                <h3 className="mt-2 font-display text-xl font-semibold text-indigo">{project.title}</h3>
+                <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-slate">{project.summary}</p>
+                <span className="mt-5 inline-flex text-sm font-semibold text-blue">Read case study <span aria-hidden="true">↗</span></span>
+              </div>
             </Link>
-          </div>
-        ) : (
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
-            {industries.map((ind) => (
-              <Card key={ind.slug}>
-                <h3 className="h-3">{ind.name}</h3>
-                <p className="mt-2 text-[15px] text-slate">{ind.problem}</p>
-              </Card>
-            ))}
-          </div>
-        )}
-      </Section>
-
-      {/* 6. Work */}
-      <Section>
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <Eyebrow>Work</Eyebrow>
-            <h2 className="h-1 mt-4 text-indigo">Verifiable over impressive</h2>
-          </div>
-          <Link
-            href="/work"
-            className="text-[15px] font-semibold text-indigo underline-offset-4 hover:underline"
-          >
-            All work →
-          </Link>
+          ))}
         </div>
-        {work.length === 0 ? (
-          <div className="mt-6 max-w-[68ch] rounded-[12px] border border-line bg-white p-7">
-            <p className="text-[17px] font-medium">
-              Case studies are being prepared.
-            </p>
-            <p className="mt-2 text-[15px] text-slate">
-              We don&apos;t show invented clients or stock photos as proof. Ask
-              us about relevant projects on a call — we&apos;ll walk through
-              real work and what we learned.
-            </p>
-            <div className="mt-5">
-              <Button href="/contact" variant="secondary">
-                Ask about relevant work
-              </Button>
-            </div>
-          </div>
-        ) : (
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
-            {work.slice(0, 4).map((c) => (
-              <Card key={c.slug}>
-                <h3 className="h-3">{c.title}</h3>
-                <p className="mt-2 text-[15px] text-slate">{c.problem}</p>
-              </Card>
-            ))}
-          </div>
-        )}
+        <div className="mt-8 text-center"><Link href="/work" className="text-link inline-flex">View all {work.length} case studies <span aria-hidden="true">↗</span></Link></div>
       </Section>
 
-      {/* 7. Why */}
-      <Section className="border-t border-line bg-white/40">
-        <Eyebrow>Why FuzeLoom</Eyebrow>
-        <h2 className="h-1 mt-4 text-indigo">Built into your business</h2>
-        <p className="mt-4 max-w-[68ch] text-[16px] text-slate">
-          No “trusted by 100+” counters, no stock photos as clients. What you
-          can check: direct email, plain scope, docs with every handover, and
-          internal builds labeled as internal.
-        </p>
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            {
-              t: "Integration-first",
-              d: "We start by mapping your CRM, data, and tools — then fit AI into that picture.",
-            },
-            {
-              t: "Engineering-led",
-              d: "Small increments, tested against your live systems, with docs your team can keep.",
-            },
-            {
-              t: "Security-conscious",
-              d: "Least access, clear data handling, and honest notes on what we wouldn't build.",
-            },
-            {
-              t: "Transparent",
-              d: "Plain scope, plain pricing, and direct contact. No invented logos or counters.",
-            },
-          ].map((x) => (
-            <Card key={x.t}>
-              <span
-                aria-hidden="true"
-                className="block h-[3px] w-10 bg-amber"
-              />
-              <h3 className="h-3 mt-4">{x.t}</h3>
-              <p className="mt-2 text-[15px] text-slate">{x.d}</p>
-            </Card>
+      <Section className="bg-linen">
+        <h2 className="heading-1 text-center text-indigo">From the people behind the projects</h2>
+        <p className="mx-auto mt-4 max-w-[58ch] text-center text-slate">Feedback originally published with our DataFuzeo projects.</p>
+        <div className="mt-12 grid gap-5 md:grid-cols-2">
+          {testimonials.map((item) => (
+            <blockquote key={item.name} className="flex flex-col rounded-[18px] border border-line bg-white p-7">
+              <p className="text-base leading-relaxed text-ink">“{item.quote}”</p>
+              <footer className="mt-auto pt-7 text-sm">
+                <p className="font-semibold text-indigo">{item.name}</p>
+                <p className="mt-1 text-slate">{item.context}</p>
+              </footer>
+            </blockquote>
           ))}
         </div>
       </Section>
 
-      {/* 8. FAQ */}
-      <Section>
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <Eyebrow>FAQ</Eyebrow>
-            <h2 className="h-1 mt-4 text-indigo">Straight answers</h2>
-            <p className="mt-4 max-w-[52ch] text-[16px] text-slate">
-              The questions every integration project gets. If yours is not
-              here, bring it to the first call.
-            </p>
-            <Link
-              href="/contact"
-              className="mt-5 inline-block text-[15px] font-semibold text-indigo underline-offset-4 hover:underline"
-            >
-              Ask your question →
-            </Link>
-          </div>
-          <FaqList compact />
-        </div>
+      <Section className="border-t border-line bg-white">
+        <h2 className="heading-1 text-center text-indigo">Frequently asked questions</h2>
+        <p className="mx-auto mt-4 max-w-[55ch] text-center text-slate">Clear answers before you start a project.</p>
+        <div className="mx-auto mt-12 max-w-[820px]"><FaqList /></div>
       </Section>
 
-      {/* 9. CTA */}
-      <div className="bg-indigo text-linen">
-        <Container className="relative overflow-hidden py-16 sm:py-20">
-          <div
-            aria-hidden="true"
-            className="woven-grid-dark pointer-events-none absolute inset-0"
-          />
-          <div className="relative max-w-[68ch]">
-            <h2 className="h-1 text-linen">
-              Have a system that should work smarter? Let&apos;s talk.
-            </h2>
-            <p className="mt-4 text-[17px] text-linen/85">
-              Tell us what you&apos;re running today and what you want it to
-              do. We&apos;ll suggest the right approach and next steps.
-            </p>
-            <div className="mt-7 flex flex-wrap gap-4">
-              <Button href="/contact" variant="primary">
-                Start a conversation
-              </Button>
-              <a
-                href={`mailto:${site.email}`}
-                className="inline-flex items-center text-[15px] font-medium text-linen/90 hover:text-amber"
-              >
-                {site.email}
-              </a>
-            </div>
-          </div>
+      <section className="bg-indigo py-20 text-center text-white sm:py-28">
+        <Container>
+          <h2 className="heading-1">Ready to build?</h2>
+          <p className="mx-auto mt-4 max-w-[48ch] text-linen/75">Let&apos;s turn your scattered systems into one useful workflow.</p>
+          <div className="mt-8"><Button href="/contact">Start a conversation <span aria-hidden="true">↗</span></Button></div>
         </Container>
-      </div>
+      </section>
     </>
   );
 }

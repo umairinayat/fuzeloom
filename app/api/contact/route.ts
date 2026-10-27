@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { contactSchema } from "@/lib/contact";
+import { site } from "@/content/site";
 
 export async function POST(req: Request) {
   const form = await req.formData();
@@ -22,8 +23,7 @@ export async function POST(req: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL;
-  if (!apiKey || !to) {
+  if (!apiKey) {
     return NextResponse.json(
       {
         ok: false,
@@ -38,8 +38,8 @@ export async function POST(req: Request) {
     const { Resend } = await import("resend");
     const resend = new Resend(apiKey);
     await resend.emails.send({
-      from: "FuzeLoom website <onboarding@resend.dev>",
-      to,
+      from: `FuzeLoom website <${site.email}>`,
+      to: process.env.CONTACT_TO_EMAIL || site.email,
       replyTo: parsed.data.email,
       subject: `New enquiry from ${parsed.data.name}${
         parsed.data.company ? ` (${parsed.data.company})` : ""

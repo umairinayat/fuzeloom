@@ -14,26 +14,26 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "#1E2A5A",
-          color: "#FAF8F4",
-          fontFamily: "Georgia, serif",
+          background: "#081730",
+          color: "#F7F9FD",
+          fontFamily: "Arial, sans-serif",
         }}
       >
         <div
           style={{
-            fontFamily: "monospace",
+            fontFamily: "Arial, sans-serif",
             fontSize: 22,
             letterSpacing: 4,
-            color: "#F2A33A",
+            color: "#9FC5FF",
           }}
         >
-          AI · SOFTWARE · INTEGRATION
+          AI engineering for the way you work
         </div>
-        <div style={{ fontSize: 72, fontWeight: 600, marginTop: 20 }}>
-          FuzeLoom
+        <div style={{ display: "flex", fontSize: 76, fontWeight: 700, marginTop: 20, letterSpacing: -4 }}>
+          Fuze<span style={{ color: "#9FC5FF" }}>Loom</span>
         </div>
         <div style={{ fontSize: 34, marginTop: 12, opacity: 0.9 }}>
-          AI, woven into how you work.
+          Make your systems work together.
         </div>
       </div>
     ),
