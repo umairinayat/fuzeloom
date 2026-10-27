@@ -48,7 +48,7 @@ export function ThreadDiagram() {
             {t.label.toUpperCase()}
           </text>
           <path
-            d={`M24 ${t.y} C 160 ${t.y}, 220 ${190 - (t.y - 190) * 0.35}, 320 190 S 460 190, 520 190`}
+            d={`M24 ${t.y} H130 C 205 ${t.y}, 250 190, 320 190`}
             fill="none"
             stroke={t.amber ? "var(--color-amber)" : "var(--color-linen)"}
             strokeWidth={t.amber ? 3 : 2}
@@ -76,8 +76,9 @@ export function ThreadDiagram() {
       />
       <circle cx="320" cy="190" r="3.5" fill="var(--color-amber)" />
       <text
-        x="336"
-        y="196"
+        x="320"
+        y="228"
+        textAnchor="middle"
         fill="var(--color-linen)"
         fontSize="13"
         fontFamily="IBM Plex Mono, monospace"
@@ -87,15 +88,15 @@ export function ThreadDiagram() {
       </text>
       {/* single woven strand out */}
       <path
-        d="M330 190 C 400 190, 450 190, 520 190"
+        d="M330 190 H520"
         fill="none"
         stroke="var(--color-amber)"
         strokeWidth="4"
         strokeLinecap="round"
       />
       <text
-        x="400"
-        y="172"
+        x="390"
+        y="165"
         fill="var(--color-linen)"
         opacity="0.75"
         fontSize="12"

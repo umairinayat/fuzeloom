@@ -179,7 +179,7 @@ export default function Home() {
 
       <Section className="bg-linen">
         <h2 className="heading-1 text-center text-indigo">From the people behind the projects</h2>
-        <p className="mx-auto mt-4 max-w-[58ch] text-center text-slate">Feedback originally published with our DataFuzeo projects.</p>
+        <p className="mx-auto mt-4 max-w-[58ch] text-center text-slate">Feedback from teams behind our published projects.</p>
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {testimonials.map((item) => (
             <blockquote key={item.name} className="flex flex-col rounded-[18px] border border-line bg-white p-7">

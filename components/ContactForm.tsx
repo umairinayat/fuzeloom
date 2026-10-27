@@ -46,7 +46,7 @@ export function ContactForm() {
     <div>
       <form onSubmit={onSubmit} className="grid gap-5" noValidate={false}>
         <div>
-          <label htmlFor="name" className="mb-1.5 block text-[15px] font-medium">
+          <label htmlFor="name" className="mb-1.5 block text-[15px] font-medium text-indigo">
             Name
           </label>
           <input
@@ -54,12 +54,12 @@ export function ContactForm() {
             name="name"
             required
             autoComplete="name"
-            className="w-full rounded-[8px] border border-line bg-white px-4 py-3 text-[16px] placeholder:text-slate/70"
+            className="w-full rounded-xl border border-line bg-linen/40 px-4 py-3 text-[16px] text-indigo placeholder:text-slate/70 focus:border-blue focus:outline-none focus:ring-2 focus:ring-blue/10"
             placeholder="Your name"
           />
         </div>
         <div>
-          <label htmlFor="email" className="mb-1.5 block text-[15px] font-medium">
+          <label htmlFor="email" className="mb-1.5 block text-[15px] font-medium text-indigo">
             Work email
           </label>
           <input
@@ -68,14 +68,14 @@ export function ContactForm() {
             type="email"
             required
             autoComplete="email"
-            className="w-full rounded-[8px] border border-line bg-white px-4 py-3 text-[16px] placeholder:text-slate/70"
+            className="w-full rounded-xl border border-line bg-linen/40 px-4 py-3 text-[16px] text-indigo placeholder:text-slate/70 focus:border-blue focus:outline-none focus:ring-2 focus:ring-blue/10"
             placeholder="you@company.com"
           />
         </div>
         <div>
           <label
             htmlFor="company"
-            className="mb-1.5 block text-[15px] font-medium"
+            className="mb-1.5 block text-[15px] font-medium text-indigo"
           >
             Company <span className="font-normal text-slate">(optional)</span>
           </label>
@@ -83,7 +83,7 @@ export function ContactForm() {
             id="company"
             name="company"
             autoComplete="organization"
-            className="w-full rounded-[8px] border border-line bg-white px-4 py-3 text-[16px] placeholder:text-slate/70"
+            className="w-full rounded-xl border border-line bg-linen/40 px-4 py-3 text-[16px] text-indigo placeholder:text-slate/70 focus:border-blue focus:outline-none focus:ring-2 focus:ring-blue/10"
             placeholder="Company name"
           />
         </div>
@@ -95,7 +95,7 @@ export function ContactForm() {
         <div>
           <label
             htmlFor="message"
-            className="mb-1.5 block text-[15px] font-medium"
+            className="mb-1.5 block text-[15px] font-medium text-indigo"
           >
             What are you running today, and what should it do?
           </label>
@@ -104,7 +104,7 @@ export function ContactForm() {
             name="message"
             required
             rows={6}
-            className="w-full rounded-[8px] border border-line bg-white px-4 py-3 text-[16px] placeholder:text-slate/70"
+            className="w-full rounded-xl border border-line bg-linen/40 px-4 py-3 text-[16px] text-indigo placeholder:text-slate/70 focus:border-blue focus:outline-none focus:ring-2 focus:ring-blue/10"
             placeholder="e.g. We use HubSpot + Sheets + an internal tool. We want…"
           />
         </div>
@@ -112,7 +112,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={pending}
-            className="rounded-[8px] bg-amber px-6 py-3 text-[16px] font-semibold text-ink transition-colors hover:bg-amber-dark disabled:opacity-60"
+            className="min-h-12 rounded-full bg-blue px-7 py-3 text-[15px] font-semibold text-white transition-colors hover:bg-[#2457d6] disabled:opacity-60"
           >
             {pending ? "Sending…" : "Send message"}
           </button>
@@ -138,15 +138,6 @@ export function ContactForm() {
             )}
           </p>
         )}
-        <p className="mt-4 text-[14px] text-slate">
-          Prefer email? Write to{" "}
-          <a
-            href={`mailto:${site.email}`}
-            className="font-medium text-indigo underline-offset-2 hover:underline"
-          >
-            {site.email}
-          </a>
-        </p>
       </div>
     </div>
   );

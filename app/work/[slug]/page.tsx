@@ -31,15 +31,16 @@ export default async function WorkDetail({ params }: { params: Promise<{ slug: s
         <Link href="/work" className="text-link">← All projects</Link>
         <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_0.65fr] lg:items-end">
           <div>
-            <Eyebrow>{item.industry} · {item.category}</Eyebrow>
+            <Eyebrow>{item.industry === item.category ? item.category : `${item.industry} · ${item.category}`}</Eyebrow>
             <h1 className="heading-1 mt-5 text-indigo">{item.title}</h1>
             <p className="mt-5 max-w-[60ch] text-lg leading-relaxed text-slate">{item.summary}</p>
           </div>
-          <div className="border-t border-line pt-5 text-sm text-slate lg:border-l lg:border-t-0 lg:pl-8">
-            <p>Originally published by <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-blue underline-offset-4 hover:underline">{item.source} ↗</a></p>
-            {item.client && <p className="mt-2">Project: {item.client}</p>}
-            {item.timeline && <p className="mt-2">Timeline: {item.timeline}</p>}
-          </div>
+          {(item.client || item.timeline) && (
+            <div className="border-t border-line pt-5 text-sm text-slate lg:border-l lg:border-t-0 lg:pl-8">
+              {item.client && <p>Project: {item.client}</p>}
+              {item.timeline && <p className={item.client ? "mt-2" : undefined}>Timeline: {item.timeline}</p>}
+            </div>
+          )}
         </div>
       </Section>
 

@@ -26,7 +26,7 @@ Read it fully before writing code. Follow it over general defaults.
 - Brand personality: precise, honest, calm, engineering-led. Not hype.
 
 ### Differentiation (important)
-Two similar agencies exist (JitterStack, DataFuzeo). FuzeLoom must NOT resemble them:
+FuzeLoom design guardrails:
 - NO dark navy + electric blue + violet + cyan neon look.
 - NO "Trusted by 100+ clients" style counters.
 - NO stock photos presented as clients.
@@ -223,6 +223,3 @@ Anything still marked TODO must render as a visible, tasteful placeholder in dev
 - Social links: TODO
 - Case studies / internal projects: TODO
 - Company registration details for footer/legal pages: TODO
-
-
-reference website : https://jitterstack.com/ https://www.datafuzeo.com/

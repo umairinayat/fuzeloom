@@ -5,8 +5,6 @@ export type CaseStudy = {
   title: string;
   category: string;
   industry: string;
-  source: string;
-  sourceUrl: string;
   summary: string;
   overview: string;
   problem: string;

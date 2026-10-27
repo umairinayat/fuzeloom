@@ -88,7 +88,7 @@ body {
   animation: tool-roll linear infinite;
 }
 .tool-window:hover .tool-track,
-.tool-track.is-paused {
+.tool-window:focus .tool-track {
   animation-play-state: paused;
 }
 @keyframes tool-roll {

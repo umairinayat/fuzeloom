@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Card, Eyebrow, Section, Button } from "@/components/ui";
-import { ServiceIcon } from "@/components/graphics";
+import { Button, Container, Eyebrow, Section } from "@/components/ui";
+import { ServiceScene } from "@/components/graphics";
 import { services } from "@/content/services";
 
 export const metadata: Metadata = {
@@ -13,58 +13,55 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <Section>
-      <Eyebrow>Services</Eyebrow>
-      <h1 className="heading-1 mt-4 max-w-[22ch] text-indigo">
-        The right technology, connected to your business.
-      </h1>
-      <p className="mt-4 max-w-[68ch] text-[17px]">
-        From AI and automation to software, cloud, and security, we build around the systems your team already runs.
-      </p>
-      <div className="mt-10 grid gap-6">
-        {services.map((s) => (
-          <Card key={s.slug} className="scroll-mt-24">
-            <div id={s.slug} className="scroll-mt-24" />
-            <div className="flex items-start gap-4">
-              <span className="text-indigo" aria-hidden="true">
-                <ServiceIcon slug={s.slug} />
-              </span>
-              <div>
-                <h2 className="heading-2 text-indigo">{s.title}</h2>
-                <p className="mt-2 max-w-[68ch] text-[16px]">{s.description}</p>
-                <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-                  {s.includes.map((item) => (
-                    <li key={item} className="flex gap-2 text-[15px] text-slate">
-                      <span aria-hidden="true" className="text-amber-dark">
-                        —
-                      </span>
-                      {item}
+    <>
+      <section className="hero-glow bg-linen py-16 sm:py-24 lg:py-28">
+        <Container>
+          <Eyebrow>Services</Eyebrow>
+          <h1 className="h-display mt-5 max-w-[16ch] text-indigo">
+            The right technology, <span className="font-serif font-normal italic text-blue">connected.</span>
+          </h1>
+          <p className="mt-6 max-w-[60ch] text-lg leading-relaxed text-slate">
+            From AI and automation to software, cloud, and security, we build around the systems your team already runs.
+          </p>
+        </Container>
+      </section>
+
+      <Section className="bg-white">
+        <div className="grid gap-6 lg:grid-cols-2">
+          {services.map((service, index) => (
+            <article key={service.slug} id={service.slug} className="flex scroll-mt-24 flex-col overflow-hidden rounded-[22px] border border-line bg-linen/50">
+              <div className="flex h-52 items-center justify-center border-b border-line bg-blue-pale/45">
+                <ServiceScene slug={service.slug} />
+              </div>
+              <div className="flex flex-1 flex-col p-7 sm:p-9">
+                <span className="text-sm font-semibold text-blue">0{index + 1} / 04</span>
+                <h2 className="heading-2 mt-4 text-indigo">{service.title}</h2>
+                <p className="mt-4 max-w-[55ch] leading-relaxed text-slate">{service.description}</p>
+                <h3 className="mt-7 border-t border-line pt-6 text-xs font-semibold uppercase tracking-[0.12em] text-indigo">What we build</h3>
+                <ul className="mt-4 grid gap-x-6 gap-y-3 xl:grid-cols-2">
+                  {service.includes.map((item) => (
+                    <li key={item} className="flex gap-2.5 text-sm leading-relaxed text-slate">
+                      <span aria-hidden="true" className="font-semibold text-blue">✓</span>
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-            </div>
-          </Card>
-        ))}
-      </div>
-
-      <div className="mt-10 max-w-[72ch] rounded-[20px] border border-line bg-blue-pale p-7">
-        <h2 className="heading-3 text-indigo">Start with the system you have</h2>
-        <p className="mt-2 text-[15px] text-slate">
-          Tell us which tools you use and where the work gets stuck. We&apos;ll map the opportunity before recommending a build.
-        </p>
-        <div className="mt-5 flex flex-wrap gap-4">
-          <Button href="/contact" variant="secondary">
-            Talk about your workflow
-          </Button>
-          <Link
-            href="/work"
-            className="inline-flex items-center text-[15px] font-semibold text-indigo underline-offset-4 hover:underline"
-          >
-            View our work →
-          </Link>
+            </article>
+          ))}
         </div>
-      </div>
-    </Section>
+      </Section>
+
+      <section className="bg-indigo py-20 text-center text-white sm:py-28">
+        <Container>
+          <h2 className="heading-1">Start with the system you have.</h2>
+          <p className="mx-auto mt-4 max-w-[55ch] text-linen/75">Tell us which tools you use and where the work gets stuck. We&apos;ll map the opportunity before recommending a build.</p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-5">
+            <Button href="/contact">Talk about your workflow <span aria-hidden="true">↗</span></Button>
+            <Link href="/work" className="text-sm font-semibold text-white underline-offset-4 hover:underline">View our work ↗</Link>
+          </div>
+        </Container>
+      </section>
+    </>
   );
 }

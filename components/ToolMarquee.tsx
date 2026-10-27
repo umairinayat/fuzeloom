@@ -1,25 +1,20 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
-import clsx from "clsx";
 
 type Tool = { name: string; logo: string };
 
 export function ToolMarquee({ tools }: { tools: Tool[] }) {
-  const [paused, setPaused] = useState(false);
   return (
     <div className="mt-5">
-      <div className="tool-window">
+      <div className="tool-window" role="region" aria-label="Technology logos; focus to pause scrolling" tabIndex={0}>
         <div
-          className={clsx("tool-track", paused && "is-paused")}
+          className="tool-track"
           style={{ animationDuration: `${tools.length * 3}s` }}
         >
           {[false, true].map((repeat) => (
             <ul
               key={String(repeat)}
               aria-hidden={repeat || undefined}
-              className={clsx("flex shrink-0 gap-3 pr-3", repeat && "motion-reduce:hidden")}
+              className={`flex shrink-0 gap-3 pr-3${repeat ? " motion-reduce:hidden" : ""}`}
             >
               {tools.map((tool) => (
                 <li
@@ -33,16 +28,6 @@ export function ToolMarquee({ tools }: { tools: Tool[] }) {
             </ul>
           ))}
         </div>
-      </div>
-      <div className="mt-5 text-center motion-reduce:hidden">
-        <button
-          type="button"
-          onClick={() => setPaused((value) => !value)}
-          aria-label={paused ? "Play tool list" : "Pause tool list"}
-          className="inline-flex min-h-10 items-center rounded-full border border-line bg-white px-5 text-[13px] font-semibold text-indigo transition-colors hover:bg-blue-pale"
-        >
-          {paused ? "Play" : "Pause"}
-        </button>
       </div>
     </div>
   );
